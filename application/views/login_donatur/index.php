@@ -16,15 +16,27 @@
         <h5><Span>Login</Span> dengan akun anda</h5>
         <div class="tabel-login">
           <form>
-            <div class="form-group">
-              <label for="username">Username</label>
-              <input type="text" class="form-control" id="username" placeholder="Masukan Username">
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" id="password" placeholder="Password">
-              <small><a href="">Lupa password?</a></small>
-            </div>
+          <?= form_open('Login') ?>
+          <div class="form-group">
+						<label for="username">Username</label>
+						<input type="text" class="form-control" id="username" name="username" placeholder="Masukan Username">
+					<?php if (validation_errors()) : ?>
+						<small><span class="text-danger"><?= form_error('username'); ?></span></small>
+					<?php endif ?>
+					</div> 
+          <div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" class="form-control" id="password" name="password" placeholder="Password">
+					
+					<?php if (validation_errors()) : ?>
+						<small><span class="text-danger"><?= form_error('password'); ?></span></small>
+					<?php endif ?>
+
+					<?php if ($this->session->flashdata('error')) : ?>
+						<small><span class="text-danger"><?= $this->session->flashdata('error'); ?></span></small>
+					<?php endif ?>	
+						<small><a href="">Lupa password?</a></small>
+					</div>
         </div>
         <button type="submit" class="btn btn-login">Login</button>
         <div class="d-flex justify-content-center">

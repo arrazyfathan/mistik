@@ -47,7 +47,7 @@
   <!-- End Navbar -->
   <div class="kotak"></div>
   </div>
-  <div class="container ">
+  <div class="container donatur">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Daftar Akun Donatur</h5>
