@@ -11,7 +11,7 @@
     crossorigin="anonymous">
 
   <!-- My CSS -->
-  <link rel="stylesheet" href="css/fixed-navbar-content.css">
+  <link href="<?php echo base_url('assets/css/content.css')?>" rel="stylesheet">
 
   <!-- My Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -19,7 +19,7 @@
     crossorigin="anonymous">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
 
   <title>Peduli Lombok</title>
 </head>
@@ -28,18 +28,18 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-      <a class="navbar-brand " href="/index.html"><img src="img/logo.png" alt=" logo"></a>
+      <a class="navbar-brand " href="home"><img src="assets/img/logo.svg" alt=" logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link active " href="#home">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link " href="#program">Program</a>
-          <a class="nav-item nav-link " href="#contact">Contact</a>
-          <a class="nav-item nav-link " href="#about">About</a>
-          <a class="nav-item btn tombol " href="login.html">Login</a>
+          <a class="nav-item nav-link active " href="home">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link " href="home">Program</a>
+          <a class="nav-item nav-link " href="home">Contact</a>
+          <a class="nav-item nav-link " href="home">About</a>
+          <a class="nav-item btn tombol " href="login">Login</a>
         </div>
       </div>
     </div>
@@ -47,40 +47,55 @@
   <!-- End Navbar -->
 
   <!-- Content -->
-  <div class="container-fluid content">
+  <div class="container-fluid konten">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="home">Home</a></li>
         <li class="breadcrumb-item"><a href="#">Program</a></li>
         <li class="breadcrumb-item active" aria-current="page">Peduli Lombok</li>
       </ol>
     </nav>
-    <div class="contaoner">
+
+    <div class="container-fluid">
       <div class="row">
-        <div class="col">
+        <div class="col-lg">
           <h3>Peduli Lombok</h3>
           <small>12 Agustus 2018</small><br>
-          <img src="img/Slide/2.jpg">
+          <img src="assets/img/Slide/2.jpg">
+        </div>
+        <div class="col-lg">
+          <p class="deskripsi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, magni. Enim modi
+            perspiciatis quasi, numquam
+            at repellendus odit consequatur architecto aspernatur, corrupti animi rem iste veniam fugiat dolor quas
+            magni.<br><br>
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, magni. Enim modi
+            perspiciatis quasi, numquam
+            at repellendus odit consequatur architecto aspernatur, corrupti animi rem iste veniam fugiat dolor quas
+            magni.</p>
+        </div>
+        <div class="col-lg">
+          <div class="alert alert-primary pengungsi" role="alert">
+            <img src="assets/img/icon/pengungsi.png">
+            <p class="ico-title">120.000 Pengungsi</p>
+          </div>
+          <div class="alert alert-primary posko" role="alert">
+            <img src="assets/img/icon/posko.png">
+            <p class="ico-title">140 Posko</p>
+          </div>
+          <div class="alert alert-primary bantuan" role="alert">
+            <img src="assets/img/icon/donasi.png">
+            <p class="ico-title">Belum Terpenuhi</p>
+          </div>
+          <button class="btn btn-primary donasi">Donasi Sekarang</button>
         </div>
       </div>
-      <div class="col">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate commodi atque ipsam asperiores quod
-          reprehenderit hic, quis fugiat dolore quo doloribus vitae perferendis earum obcaecati eum saepe amet,
-          excepturi
-          cupiditate.</p>
-      </div>
-      <div class="col">
-      </div>
     </div>
-
   </div>
 
+
+
   <!-- End Content -->
-
-
-
-
-
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

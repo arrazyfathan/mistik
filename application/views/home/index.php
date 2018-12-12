@@ -54,7 +54,7 @@
               <h5 class="card-title">Peduli Lombok</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                 card's content.</p>
-              <a href="#" class="btn card-button">Donasi Sekarang</a>
+              <a href="<?= base_url();?>contentcontroller" class="btn card-button">Donasi Sekarang</a>
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@
               <h5 class="card-title">Banjir Sumatra</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                 card's content.</p>
-              <a href="#" class="btn card-button">Donasi Sekarang</a>
+              <a href="<?= base_url();?>content1controller" class="btn card-button">Donasi Sekarang</a>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@
               <h5 class="card-title">Peduli Rakyat Palu</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                 card's content.</p>
-              <a href="#" class="btn card-button">Donasi Sekarang</a>
+              <a href="<?= base_url();?>content2controller" class="btn card-button">Donasi Sekarang</a>
             </div>
           </div>
         </div>
@@ -87,7 +87,7 @@
               <h5 class="card-title">Bantu Rakyat Sinabung</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                 card's content.</p>
-              <a href="#" class="btn card-button">Donasi Sekarang</a>
+              <a href="<?= base_url();?>content3controller" class="btn card-button">Donasi Sekarang</a>
             </div>
           </div>
         </div>

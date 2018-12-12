@@ -1,0 +1,127 @@
+* {
+    overflow-x: hidden;
+}
+
+h3 {
+    overflow: hidden;
+}
+
+.navbar img {
+    width: 130px;
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+
+}
+
+.navbar-nav .nav-link {
+    color: #50B1AE !important;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 50px;
+}
+
+.tombol {
+    border-radius: 5px;
+    width: 100px;
+    background-color: #50B1AE;
+    color: white;
+    border-color: white;
+    font-weight: 600 !important;
+    margin-left: 50px;
+}
+
+.tombol:hover {
+    background-color: #f2f2f2;
+    border-color: #f2f2f2;
+    color: #50B1AE;
+}
+
+.breadcrumb {
+    margin-top: 10px;
+    background-color: white;
+}
+
+.breadcrumb li a {
+    color: black;
+}
+
+img {
+    width: 500px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.alert {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(235, 236, 236);
+    border: none;
+}
+
+
+.pengungsi img {
+    width: 40px;
+    margin-left: 20px;
+}
+
+.posko img {
+    width: 40px;
+    margin-left: 20px;
+}
+
+.bantuan img {
+    width: 40px;
+    margin-left: 20px;
+}
+
+.tanggal {
+    margin-bottom: 100px;
+}
+
+.deskripsi {
+    text-align: justify;
+    margin-top: 70px;
+}
+
+.konten {
+    margin-left: 30px;
+}
+
+.alert {
+    width: 350px;
+}
+
+.pengungsi {
+    margin-top: 75px;
+}
+
+.donasi {
+    border-radius: 45px;
+    width: 350px;
+    padding: 10px;
+    background-color: #E38813;
+    border: none;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.donasi:hover {
+    border-radius: 45px;
+    width: 350px;
+    padding: 10px;
+    background-color: rgb(185, 112, 16);
+    border: none;
+    transform: translateY(-7px);
+}
+
+.ico-title {
+    display: inline;
+    margin-left: 30px;
+    color: black;
+    font-weight: 400;
+    font-size: 18px;
+}
