@@ -28,7 +28,7 @@
         </div>
         <button type="submit" class="btn btn-login">Login</button>
         <div class="d-flex justify-content-center">
-          <a href="daftar_donatur.html" class="buat-akun">Buat Akun</a>
+          <a href="<?= base_url();?>formdonatur" class="buat-akun">Buat Akun</a>
         </div>
         </form>
       </div>

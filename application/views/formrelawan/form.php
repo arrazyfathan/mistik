@@ -123,6 +123,10 @@
                   <label for="repeat">Ulangi Password</label>
                   <input type="password" class="form-control" id="repeat" placeholder="Ulangi Password">
                 </div>
+                <div class="invisible">
+                  <label for="repeat">Role</label>
+                  <input type="number" value="1" class="form-control" id="repeat" placeholder="Ulangi Password">
+                </div>
               </div>
             </div>
         </div>
