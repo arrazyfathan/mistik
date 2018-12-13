@@ -19,7 +19,7 @@
     crossorigin="anonymous">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href=<?php echo base_url('assets/img/favicon.ico')?>>
+  <link rel="shortcut icon" href=<?php echo base_url('assets/img/mistik.ico')?>>
 
   <title><?php echo $judul; ?></title>
 </head>
