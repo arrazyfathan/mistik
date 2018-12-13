@@ -19,7 +19,7 @@
             }
         
             function profile() {
-                $this->template->load('admin/template', 'admin/profile');
+                $this->template->load('admin/template', 'admin/data_relawan');
             }
         
             function maps() {

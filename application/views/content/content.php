@@ -19,7 +19,7 @@
     crossorigin="anonymous">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="assets/img/favicon.ico">
+  <link rel="shortcut icon" href="<?php echo base_url('assets/img/favicon.ico')?>">
 
   <title>Peduli Lombok</title>
 </head>
@@ -28,7 +28,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-      <a class="navbar-brand " href="home"><img src="assets/img/logo.svg" alt=" logo"></a>
+      <a class="navbar-brand " href="<?php echo base_url()?>"><img src="<?= base_url('assets/img/logo.svg') ?>" alt=" logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -61,7 +61,7 @@
         <div class="col-lg">
           <h3>Peduli Lombok</h3>
           <small>12 Agustus 2018</small><br>
-          <img src="assets/img/Slide/2.jpg">
+          <img src="<?php echo base_url('assets/img/Slide/2.jpg')?>">
         </div>
         <div class="col-lg">
           <p class="deskripsi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, magni. Enim modi
@@ -76,15 +76,15 @@
         </div>
         <div class="col-lg">
           <div class="alert alert-primary pengungsi" role="alert">
-            <img src="assets/img/icon/pengungsi.png">
+            <img src="<?php echo base_url('assets/img/icon/pengungsi.png')?>">
             <p class="ico-title">120.000 Pengungsi</p>
           </div>
           <div class="alert alert-primary posko" role="alert">
-            <img src="assets/img/icon/posko.png">
+            <img src="<?php echo base_url('assets/img/icon/posko.png')?>">
             <p class="ico-title">140 Posko</p>
           </div>
           <div class="alert alert-primary bantuan" role="alert">
-            <img src="assets/img/icon/donasi.png">
+            <img src="<?php echo base_url('assets/img/icon/donasi.png')?>">
             <p class="ico-title">Belum Terpenuhi</p>
           </div>
           <a href="<?= base_url();?>donasicontroller" class="btn btn-primary donasi" >Donasi Sekarang</a>
