@@ -29,7 +29,8 @@ class logindb extends CI_Controller{
                 $this->session->set_userdata('masuk',TRUE);
                 $this->session->set_userdata('akses','2');
                 $this->session->set_userdata('ses_id',$data['id']);
-                $this->session->set_userdata('ses_nama',$data['nama']);
+                $this->session->set_userdata('ses_nama',$data['nama_depan']);
+                $this->session->set_userdata('ses_nama2',$data['nama_belakang']);
                 redirect('petugas');
             }else {
                 $url=base_url('logindb');
