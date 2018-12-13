@@ -30,5 +30,6 @@ class Petugas_model extends CI_model
 
         $this->db->insert('petugas', $data);
     }
+
     
 }

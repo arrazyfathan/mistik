@@ -18,7 +18,7 @@
         <!--     Fonts and icons     -->
         
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:|Material+Icons' rel='stylesheet' type='text/css'>
     </head>
 
     <body>
@@ -45,7 +45,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url() . 'admin/profile' ?>">
+                            <a href="<?php echo base_url();?>data_relawan">
                                 <i class="material-icons">person</i>
                                 <p>Data Relawan</p>
                             </a>
@@ -81,7 +81,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand">Selamat datang, <?php echo $this->session->userdata('ses_nama');?></a>
+                            <a class="navbar-brand" style="font-size:24px;">Selamat datang, <?php echo $this->session->userdata('ses_nama');?></a>
                         </div>
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-right">
@@ -116,14 +116,14 @@
                                     </ul>
                                 </li> -->
                                 <li>
-                                    <a href="<?php echo base_url().'logindb/logout'?>">Logout</a>
+                                    <a class="btn btn-danger" href="<?php echo base_url().'logindb/logout'?>">Logout</a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
                                         <i class="material-icons">person</i>
                                         <p class="hidden-lg hidden-md">Profile</p>
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                             <!-- <form class="navbar-form navbar-right" role="search">
                                 <div class="form-group  is-empty">

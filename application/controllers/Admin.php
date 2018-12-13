@@ -18,9 +18,9 @@
                 $this->template->load('admin/template', 'admin/table');
             }
         
-            function profile() {
-                $this->template->load('admin/template', 'admin/data_relawan');
-            }
+            // function datarelawan() {
+            //     $this->template->load('admin/template', 'admin/data_relawan');
+            // }
         
             function maps() {
                 $this->template->load('admin/template', 'admin/maps');
