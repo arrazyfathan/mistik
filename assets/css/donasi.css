@@ -1,0 +1,112 @@
+.navbar img {
+    width: 130px;
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+
+}
+
+.navbar-nav .nav-link {
+    color: #50B1AE !important;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 50px;
+}
+
+.tombol {
+    border-radius: 5px;
+    width: 100px;
+    background-color: rgb(228, 74, 68);
+    color: white;
+    border-color: white;
+    font-weight: 600 !important;
+    margin-left: 50px;
+}
+
+.tombol:hover {
+    background-color: rgb(197, 40, 35);
+    color: white;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 26px;
+    color: #4c4c4c;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 15px;
+    text-align: center;
+    width: 800px;
+    margin: auto;
+    color: #4c4c4c;
+}
+
+.kotak {
+    margin: auto;
+    margin-top: 40px;
+
+}
+
+.kotak img {
+    width: 180px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    -webkit-box-shadow: 0px 1px 25px 2px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 1px 25px 2px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 1px 25px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card-text {
+    text-align: center;
+    font-size: 13px;
+    margin: 20px 10px;
+}
+
+.btn-donasi {
+    background-color: #E38813;
+    width: 100%;
+    color: white;
+
+}
+
+.btn-donasi:hover {
+    background-color: rgb(192, 115, 15);
+    width: 100%;
+    color: white;
+}
+
+.card-footer {
+    border-bottom-right-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 50px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.col {
+    margin-left: 70px;
+    margin-right: 70px;
+}

@@ -87,7 +87,7 @@
             <img src="assets/img/icon/donasi.png">
             <p class="ico-title">Belum Terpenuhi</p>
           </div>
-          <button class="btn btn-primary donasi">Donasi Sekarang</button>
+          <a href="<?= base_url();?>donasicontroller" class="btn btn-primary donasi" >Donasi Sekarang</a>
         </div>
       </div>
     </div>
