@@ -317,7 +317,7 @@
 .box-login h5 {
 	font-size: 22px;
 	text-align: center;
-	margin-top: 50px;
+	margin-top: 20px;
 }
 
 .box-login span {
@@ -333,18 +333,18 @@
 }
 
 .tabel-login {
-	margin-top: 70px;
+	margin-top: 1px;
 }
 
 .form-group {
 	width: 85%;
 	margin: auto;
-	margin-top: 40px;
+	margin-top: 30px;
 	font-size: 18px;
 }
 
 .btn-login {
-	margin-top: 60px;
+	margin-top: 80px;
 	margin-left: 150px;
 	width: 145px;
 	color: white;

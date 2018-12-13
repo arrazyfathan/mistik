@@ -12,7 +12,7 @@
           <a class="nav-item nav-link" href="#program">Program</a>
           <a class="nav-item nav-link" href="#contact">Contact</a>
           <a class="nav-item nav-link" href="#about"><span>About</span></a>
-          <a class="nav-item btn tombol" href="<?= base_url();?>formdonatur">Sign Up</a>
+          <a class="nav-item btn tombol" href="<?= base_url();?>daftar_donatur">Sign Up</a>
         </div>
       </div>
     </div>
@@ -32,7 +32,7 @@
           Mari bantu saudara-saudara kita dengan mendonasikan
           sebagian<br> harta kita atau menjadi relawan.</p>
 
-        <a class="btn tombol1" href="<?= base_url();?>Login">Donasi Sekarang</a><a class="btn tombol1" href="<?= base_url();?>formrelawan">Jadi
+        <a class="btn tombol1" href="<?= base_url();?>login_donatur">Donasi Sekarang</a><a class="btn tombol1" href="<?= base_url();?>daftar_relawan">Jadi
           Relawan</a>
       </div>
     </div>
