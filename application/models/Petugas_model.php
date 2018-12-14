@@ -30,5 +30,10 @@ class Petugas_model extends CI_model
 
         $this->db->insert('petugas', $data);
     }
+
+    public function hapusDataPetugas($id)
+    {
+        $this->db->delete('petugas', array('id_petugas' => $id));
+    }
     
 }

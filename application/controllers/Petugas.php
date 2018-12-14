@@ -11,20 +11,18 @@
         }
         
         function index(){
-            $this->template->load('petugas/template', 'petugas/dashboard');
-            }
-    
+                $this->template->load('petugas/template', 'petugas/dashboard');
+        }
+            
         function tables() {
                 $this->template->load('petugas/template', 'petugas/table');
             }
         
-            function profile() {
+        function profile() {
                 $this->template->load('petugas/template', 'petugas/profile');
             }
         
-            function maps() {
+        function maps() {
                 $this->template->load('petugas/template', 'petugas/maps');
             }
-        
-        
     }

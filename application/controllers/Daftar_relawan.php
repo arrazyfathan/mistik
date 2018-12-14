@@ -79,7 +79,7 @@ class Daftar_relawan extends CI_Controller
                         $this->load->view('daftar relawan/index');  
                 } else {
                         $this->Petugas_model->tambahDataPetugas();
-                        $this->session->set_flashdata('flash', 'Disimpan');
+                        $this->session->set_flashdata('flash', 'Terdaftar');
                         redirect('daftar_relawan');
                 }
     }

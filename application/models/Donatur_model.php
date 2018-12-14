@@ -23,4 +23,9 @@ class Donatur_model extends CI_model
         $this->db->insert('donatur', $data);
     }
 
+    public function hapusDataDonatur($id)
+    {
+        $this->db->delete('donatur', array('id_donatur' => $id));
+    }
+
 }

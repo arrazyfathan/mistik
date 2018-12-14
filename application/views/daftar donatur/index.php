@@ -19,7 +19,7 @@
     crossorigin="anonymous">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="assets/img/favicon.ico">
+  <link rel="shortcut icon" href="assets/img/mistik.ico">
 
   <title>Daftar Donatur</title>
 </head>
@@ -115,20 +115,11 @@
 						<small><span class="text-danger"><?= form_error('repeat'); ?></span></small>
 					<?php endif ?>
 					</div>
-
-					<?php if ($this->session->flashdata('flash')) : ?>
-					<div class="form-group">
-						<div class="alert alert-success alert-dismissible fade show" role="alert">
-							<strong>Data telah</strong> <?= $this->session->flashdata('flash'); ?>.
-							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-					</div>
-					<?php endif ?>
-
+					
+					<div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash');?>"></div>
+		
 					<div class="d-flex justify-content-center">
-						<button type="submit" class="btn btn-daftar">Daftar</button>
+						<button type="submit" class="btn btn-daftar" id="daftar" >Daftar</button>
 					</div>
 				</form>
 			</div>
@@ -145,6 +136,13 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+
+		<!-- Script Sweet Alert2 -->
+    <script src="<?= base_url()?>assets/js/sweetalert2.all.min.js"></script>
+
+		<!-- My JSS -->
+		<script src="<?= base_url()?>assets/js/sweetalertfix.js"></script>
+
 </body>
 
 </html>

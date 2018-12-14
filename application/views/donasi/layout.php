@@ -19,7 +19,7 @@
         crossorigin="anonymous">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" href="assets/img/mistik.ico">
 
     <title>Donasi</title>
 </head>

@@ -9,7 +9,7 @@ class Daftar_donatur extends CI_Controller
                 $this->load->model('Donatur_model');
                 $this->load->library('form_validation');
         }
-
+        
         public function index()
         {
                 $data['judul'] = 'Mistik';
@@ -62,11 +62,11 @@ class Daftar_donatur extends CI_Controller
 
                 if ($this->form_validation->run() == false) {
 
-                        $this->load->view('daftar donatur/index');
+                        $this->load->view('daftar donatur/index', $data);
 
                 } else {
                         $this->Donatur_model->tambahDataDonatur();
-                        $this->session->set_flashdata('flash', 'Disimpan');
+                        $this->session->set_flashdata('flash', 'Terdaftar');
                         redirect('daftar_donatur');
                 }
         }

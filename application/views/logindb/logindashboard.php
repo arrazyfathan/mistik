@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="assets/img/favicon.ico">
+  <link rel="shortcut icon" href="assets/img/mistik.ico">
 
   <title>Login Dashboard</title>
 </head>

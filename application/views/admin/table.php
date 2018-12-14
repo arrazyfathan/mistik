@@ -1,125 +1,125 @@
 <div class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header" data-background-color="purple">
-                        <h4 class="title">Simple Table</h4>
-                        <p class="category">Here is a subtitle for this table</p>
-                    </div>
-                    <div class="card-content table-responsive">
-                        <table class="table">
-                            <thead class="text-primary">
-                                <tr><th>Name</th>
-                                    <th>Country</th>
-                                    <th>City</th>
-                                    <th>Salary</th>
-                                </tr></thead>
-                            <tbody>
-                                <tr>
-                                    <td>Dakota Rice</td>
-                                    <td>Niger</td>
-                                    <td>Oud-Turnhout</td>
-                                    <td class="text-primary">$36,738</td>
-                                </tr>
-                                <tr>
-                                    <td>Minerva Hooper</td>
-                                    <td>Curaçao</td>
-                                    <td>Sinaai-Waas</td>
-                                    <td class="text-primary">$23,789</td>
-                                </tr>
-                                <tr>
-                                    <td>Sage Rodriguez</td>
-                                    <td>Netherlands</td>
-                                    <td>Baileux</td>
-                                    <td class="text-primary">$56,142</td>
-                                </tr>
-                                <tr>
-                                    <td>Philip Chaney</td>
-                                    <td>Korea, South</td>
-                                    <td>Overland Park</td>
-                                    <td class="text-primary">$38,735</td>
-                                </tr>
-                                <tr>
-                                    <td>Doris Greene</td>
-                                    <td>Malawi</td>
-                                    <td>Feldkirchen in Kärnten</td>
-                                    <td class="text-primary">$63,542</td>
-                                </tr>
-                                <tr>
-                                    <td>Mason Porter</td>
-                                    <td>Chile</td>
-                                    <td>Gloucester</td>
-                                    <td class="text-primary">$78,615</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="card card-plain">
-                    <div class="card-header" data-background-color="purple">
-                        <h4 class="title">Table on Plain Background</h4>
-                        <p class="category">Here is a subtitle for this table</p>
-                    </div>
-                    <div class="card-content table-responsive">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr><th>ID</th>
-                                    <th>Name</th>
-                                    <th>Salary</th>
-                                    <th>Country</th>
-                                    <th>City</th>
-                                </tr></thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Dakota Rice</td>
-                                    <td>$36,738</td>
-                                    <td>Niger</td>
-                                    <td>Oud-Turnhout</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Minerva Hooper</td>
-                                    <td>$23,789</td>
-                                    <td>Curaçao</td>
-                                    <td>Sinaai-Waas</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Sage Rodriguez</td>
-                                    <td>$56,142</td>
-                                    <td>Netherlands</td>
-                                    <td>Baileux</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Philip Chaney</td>
-                                    <td>$38,735</td>
-                                    <td>Korea, South</td>
-                                    <td>Overland Park</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Doris Greene</td>
-                                    <td>$63,542</td>
-                                    <td>Malawi</td>
-                                    <td>Feldkirchen in Kärnten</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>Mason Porter</td>
-                                    <td>$78,615</td>
-                                    <td>Chile</td>
-                                    <td>Gloucester</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="container-fluid">
+		<div class="row">
+			<!-- Daftar Program -->
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header" data-background-color="purple">
+						<h4 class="title">Tabel Daftar Program</h4>
+						<p class="category">Daftar Program Bantuan Bencana</p>
+					</div>
+					<div class="card-content table-responsive">
+						<table class="table">
+							<thead class="text-primary">
+								<tr>
+									<th>Nama Program</th>
+									<th>Jenis Bencana</th>
+									<th>Jumlah Pengungsi</th>
+									<th>Deskripsi</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+							<?php foreach ($bencana as $bcn) : ?>
+								<tr>
+									<td> <?= $bcn['nama_program']; ?></td>
+									<td> <?= $bcn['jenis_bencana']; ?></td>
+									<td> <?= $bcn['jumlah_pengungsi']; ?></td>
+									<td> <?= $bcn['deskripsi']; ?> </td>
+									<!-- Menghapus data -->
+									<td><a href="<?= base_url() ?>admin/hapusBencana/<?= $bcn['id_bencana']; ?>" onclick="return confirm('Anda Yakin');">hapus</a></td>
+								</tr>
+							<?php endforeach; ?>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		    <!-- End Daftar Program -->
+            <!-- Daftar Petugas -->
+			<div class="col-md-12">
+				<div class="card card-plain">
+					<div class="card-header" data-background-color="purple">
+						<h4 class="title">Tabel Daftar Petugas</h4>
+						<p class="category">Relawan Program Bantuan Bencana</p>
+					</div>
+					<div class="card-content table-responsive">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th class="text-center text-primary">Action</th>
+									<th class="text-center">Nama Depan</th>
+									<th class="text-center">Nama Belakang</th>
+									<th class="text-center">Email</th>
+									<th class="text-center">No. Telepon</th>
+									<th class="text-center">Tempat Tanggal Lahir</th>
+									<th class="text-center">Agama</th>
+									<th class="text-center">Jenis kelamin</th>
+									<th class="text-center">Jenis Identitas</th>
+									<th class="text-center">No. Identitas</th>
+									<th class="text-center">Alamat</th>
+									<th class="text-center">Kode POS</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php foreach ($petugas as $pts) : ?>
+								<tr>
+									<!-- Menghapus data -->
+									<td><a href="<?= base_url() ?>admin/hapusPetugas/<?= $pts['id_petugas']; ?>" onclick="return confirm('Anda Yakin');">hapus</a></td>
+									<td class="text-center"> <?= $pts['nama_depan']; ?></td>
+									<td class="text-center"> <?= $pts['nama_belakang']; ?></td>
+									<td class="text-center"> <?= $pts['email']; ?></td>
+									<td class="text-center"> <?= $pts['no_telepon']; ?> </td>
+									<td class="text-center"> <?= $pts['ttl']; ?> </td>
+									<td class="text-center"> <?= $pts['agama']; ?> </td>
+									<td class="text-center"> <?= $pts['jenis_kelamin']; ?> </td>
+									<td class="text-center"> <?= $pts['jenis_identitas']; ?> </td>
+									<td class="text-center"> <?= $pts['no_identitas']; ?> </td>
+									<td class="text-center"> <?= $pts['alamat']; ?> </td>
+									<td class="text-center"> <?= $pts['pos']; ?> </td>
+								</tr>
+							<?php endforeach; ?>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+            <!-- End Daftar Petugas -->
+            <!-- Daftar Donatur -->
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header" data-background-color="purple">
+						<h4 class="title">Tabel Daftar Donatur</h4>
+						<p class="category">Daftar Donatur Program Bantuan Bencana</p>
+					</div>
+					<div class="card-content table-responsive">
+						<table class="table">
+							<thead class="text-primary">
+								<tr>
+									<th>Nama Lengkap</th>
+									<th>Email</th>
+									<th>Alamat</th>
+									<th>No. Telepon</th>
+									<th class="text-primary">Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php foreach ($donatur as $dtr) : ?>
+								<tr>
+									<td> <?= $dtr['nama_lengkap']; ?></td>
+									<td> <?= $dtr['email']; ?></td>
+									<td> <?= $dtr['alamat']; ?></td>
+									<td> <?= $dtr['no_telepon']; ?> </td>
+									<!-- Menghapus data -->
+									<td><a href="<?= base_url() ?>admin/hapusDonatur/<?= $dtr['id_donatur']; ?>" onclick="return confirm('Anda Yakin');">hapus</a></td>
+								</tr>
+							<?php endforeach; ?>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+            <!-- End Daftar Donatur -->
+		</div>
+	</div>
 </div>
