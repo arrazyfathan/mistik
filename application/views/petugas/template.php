@@ -14,7 +14,7 @@
         <!--  Material Dashboard CSS    -->
         <link href="<?php echo base_url(); ?>assets/css/material-dashboard.css?v=1.2.0" rel="stylesheet" />
         <!--  CSS for Demo Purpose, don't include it in your project     -->
-       
+
         <!--     Fonts and icons     -->
         
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
@@ -39,43 +39,43 @@
                         <li class="active">
                             <?php //echo anchor('welcome','<i class="material-icons"> Dashboard');?>
 
-                            <a href="<?php echo base_url() . 'admin'?>">
+                            <a href="<?php echo base_url() . 'petugas'?>">
                                 <i class="material-icons">dashboard</i>
                                 <p>Dashboard</p>
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url() . 'admin/profile' ?>">
-                                <i class="material-icons">person</i>
+                            <a href="<?php echo base_url() . 'petugas/tambahKelogistik' ?>">
+                                <i class="material-icons">input</i>
+                                <p>Kekurangan Logistik</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url() . 'petugas/profilePetugas' ?>">
+                                <i class="material-icons">people</i>
                                 <p>Data Relawan</p>
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url() . 'admin/profile' ?>">
-                                <i class="material-icons">person</i>
+                            <a href="<?php echo base_url() . 'petugas/profilePosko' ?>">
+                                <i class="material-icons">business</i>
+                                <p>Data Posko</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url() . 'petugas/profileDonatur' ?>">
+                                <i class="material-icons">people</i>
                                 <p>Data Donatur</p>
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url() . 'admin/profile' ?>">
-                                <i class="material-icons">person</i>
-                                <p>Posko</p>
+                            <a href="<?php echo base_url() . 'petugas/profileBencana' ?>">
+                                <i class="material-icons">poll</i>
+                                <p>Data Program</p>
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url() . 'admin/profile' ?>">
-                                <i class="material-icons">person</i>
-                                <p>Data Bencana</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo base_url() . 'admin/tables' ?>">
-                                <i class="material-icons">content_paste</i>
-                                <p>Table List</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo base_url() . 'admin/maps' ?>">
+                            <a href="<?php echo base_url() . 'petugas/maps' ?>">
                                 <i class="material-icons">location_on</i>
                                 <p>Maps</p>
                             </a>
@@ -178,6 +178,11 @@
 <script src="<?php echo base_url(); ?>assets/js/material-dashboard.js?v=1.2.0"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="<?php echo base_url(); ?>assets/js/demo.js"></script>
+<!-- Script Sweet Alert2 -->
+<script src="<?= base_url()?>assets/js/sweetalert2.all.min.js"></script>
+<!-- My JSS -->
+<script src="<?= base_url()?>assets/js/sweetalertfix.js"></script>
+
 <script type="text/javascript">
     $(document).ready(function() {
 

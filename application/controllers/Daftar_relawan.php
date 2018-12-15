@@ -13,7 +13,6 @@ class Daftar_relawan extends CI_Controller
     public function index()
     {
         $data['judul'] = 'Mistik';
-        $data['petugas'] = $this->Petugas_model->getAllPetugas();
 
         $config = array(
                         array(

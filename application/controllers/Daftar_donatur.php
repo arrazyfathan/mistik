@@ -13,7 +13,6 @@ class Daftar_donatur extends CI_Controller
         public function index()
         {
                 $data['judul'] = 'Mistik';
-                $data['donatur'] = $this->Donatur_model->getAllDonatur();
 
                 $config = array(
                         array(
@@ -62,7 +61,7 @@ class Daftar_donatur extends CI_Controller
 
                 if ($this->form_validation->run() == false) {
 
-                        $this->load->view('daftar donatur/index', $data);
+                        $this->load->view('daftar donatur/index');
 
                 } else {
                         $this->Donatur_model->tambahDataDonatur();

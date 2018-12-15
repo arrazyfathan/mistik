@@ -35,5 +35,20 @@ class Petugas_model extends CI_model
     {
         $this->db->delete('petugas', array('id_petugas' => $id));
     }
+
+    public function editDataPetugas($id)
+    {
+        $data = [
+
+            "nama_depan" => $this->input->post('nama-depan', true),
+            "nama_belakang" => $this->input->post('nama-belakang', true),
+            "no_telepon" => $this->input->post('notelp', true),
+            "alamat" => $this->input->post('alamat', true)
+
+        ];
+
+        $this->db->where('id_petugas', $id);
+        $this->db->update('petugas', $data);
+    }
     
 }

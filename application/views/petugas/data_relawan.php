@@ -6,7 +6,7 @@
 				<div class="card">
 					<div class="card-header" data-background-color="purple">
 						<h4 class="title">Tabel Daftar Petugas</h4>
-						<p class="category"> Daftar Relawan Program Bantuan Bencana</p>
+						<p class="category">Daftar Relawan Program Bantuan Bencana</p>
 					</div>
 					<div class="card-content table-responsive">
 						<table class="table table-hover">
@@ -21,13 +21,11 @@
 									<th class="text-center">Jenis Identitas</th>
 									<th class="text-center">No. Identitas</th>
 									<th class="text-center">Alamat</th>
-									<th class="text-center text-primary">Action</th>
 								</tr>
 							</thead>
 							<tbody>
 								<?php foreach ($petugas as $pts) : ?>
 								<tr>
-									<!-- Menghapus data -->
 									<td class="text-center"> <?= $pts['nama_depan']; ?></td>
 									<td class="text-center"> <?= $pts['nama_belakang']; ?></td>
 									<td class="text-center"> <?= $pts['no_telepon']; ?> </td>
@@ -37,10 +35,6 @@
 									<td class="text-center"> <?= $pts['jenis_identitas']; ?> </td>
 									<td class="text-center"> <?= $pts['no_identitas']; ?> </td>
 									<td class="text-center"> <?= $pts['alamat']; ?> </td>
-									<td class="text-center">
-									<a href="<?= base_url() ?>admin/editPetugas/<?= $pts['id_petugas']; ?>" class="badge badge-warning">Edit </a>
-									<a href="<?= base_url() ?>admin/hapusPetugas/<?= $pts['id_petugas']; ?>" class="badge badge-danger tombol-hapus">Hapus</a>
-									</td>
 								</tr>
 							<?php endforeach; ?>
 							</tbody>

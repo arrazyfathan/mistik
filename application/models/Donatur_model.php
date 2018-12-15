@@ -28,4 +28,19 @@ class Donatur_model extends CI_model
         $this->db->delete('donatur', array('id_donatur' => $id));
     }
 
+    public function editDataDonatur($id)
+    {
+        $data = [
+
+            "nama_lengkap" => $this->input->post('nama-lengkap', true),
+            "alamat" => $this->input->post('alamat', true),
+            "no_telepon" => $this->input->post('notelp', true)
+
+        ];
+
+        $this->db->where('id_donatur', $id);
+        $this->db->update('donatur', $data);
+
+    }
+
 }
