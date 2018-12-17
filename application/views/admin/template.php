@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8" />
         <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url(); ?>assets/img/apple-icon.png" />
-        <link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets/img/favicon.ico" />
+        <link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets/img/mistik.ico" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <title>Dashboard BDPB</title>
         <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -14,11 +14,19 @@
         <!--  Material Dashboard CSS    -->
         <link href="<?php echo base_url(); ?>assets/css/material-dashboard.css?v=1.2.0" rel="stylesheet" />
         <!--  CSS for Demo Purpose, don't include it in your project     -->
-       
+    
         <!--     Fonts and icons     -->
-        
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Roboto:|Material+Icons' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+
+        <!-- Mapbox -->
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+
+        <!-- Chart.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    
+    
     </head>
 
     <body>
@@ -45,21 +53,33 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url();?>data_relawan">
-                                <i class="material-icons">person</i>
+                            <a href="<?php echo base_url() . 'admin/profileBencana' ?>">
+                                <i class="material-icons">poll</i>
+                                <p>Data Program</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url() . 'admin/profileLogistik' ?>">
+                                <i class="material-icons">assignment_late</i>
+                                <p>Data Kelogistik</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url() . 'admin/profilePetugas' ?>">
+                                <i class="material-icons">people</i>
                                 <p>Data Relawan</p>
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url() . 'admin/profile' ?>">
-                                <i class="material-icons">person</i>
+                            <a href="<?php echo base_url() . 'admin/profileDonatur' ?>">
+                                <i class="material-icons">people</i>
                                 <p>Data Donatur</p>
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url() . 'admin/tables' ?>">
-                                <i class="material-icons">content_paste</i>
-                                <p>Table List</p>
+                            <a href="<?php echo base_url() . 'admin/profilePosko' ?>">
+                                <i class="material-icons">business</i>
+                                <p>Data Posko</p>
                             </a>
                         </li>
                         <li>
@@ -81,17 +101,17 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" style="font-size:24px;">Selamat datang, <?php echo $this->session->userdata('ses_nama');?></a>
+                            <a class="navbar-brand">Selamat datang, <?php echo $this->session->userdata('ses_nama');?></a>
                         </div>
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <!-- <li>
+                                <li>
                                     <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
                                         <i class="material-icons">dashboard</i>
                                         <p class="hidden-lg hidden-md">Dashboard</p>
                                     </a>
-                                </li> -->
-                                <!-- <li class="dropdown">
+                                </li>
+                                <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                         <i class="material-icons">notifications</i>
                                         <span class="notification">5</span>
@@ -114,27 +134,27 @@
                                             <a href="#">Another One</a>
                                         </li>
                                     </ul>
-                                </li> -->
-                                <li>
-                                    <a class="btn btn-danger" href="<?php echo base_url().'logindb/logout'?>">Logout</a>
                                 </li>
-                                <!-- <li>
+                                <li>
+                                    <a href="<?php echo base_url().'logindb/logout'?>">Logout</a>
+                                </li>
+                                <li>
                                     <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
                                         <i class="material-icons">person</i>
                                         <p class="hidden-lg hidden-md">Profile</p>
                                     </a>
-                                </li> -->
+                                </li>
                             </ul>
-                            <!-- <form class="navbar-form navbar-right" role="search">
+                            <form class="navbar-form navbar-right" role="search" action="" method="post">
                                 <div class="form-group  is-empty">
-                                    <input type="text" class="form-control" placeholder="Search">
+                                    <input type="text" class="form-control" placeholder="Search" name="keyword">
                                     <span class="material-input"></span>
                                 </div>
-                                <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                                <button type="submit" class="btn btn-white btn-round btn-just-icon not-found">
                                     <i class="material-icons">search</i>
                                     <div class="ripple-container"></div>
                                 </button>
-                            </form> -->
+                            </form>
                         </div>
                     </div>
                 </nav>
@@ -166,6 +186,11 @@
 <script src="<?php echo base_url(); ?>assets/js/material-dashboard.js?v=1.2.0"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="<?php echo base_url(); ?>assets/js/demo.js"></script>
+<!-- Script Sweet Alert2 -->
+<script src="<?= base_url()?>assets/js/sweetalert2.all.min.js"></script>
+<!-- My JSS -->
+<script src="<?= base_url()?>assets/js/sweetalertfix.js"></script>
+
 <script type="text/javascript">
     $(document).ready(function() {
 

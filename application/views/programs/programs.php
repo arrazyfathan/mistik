@@ -15,39 +15,6 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3">
-          <div class="card" style="width: 15rem;">
-            <img class="card-img-top" src="assets/img/content/sumatra-01.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Banjir Sumatra</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <a href="<?= base_url();?>content/content1controller" class="btn card-button">Donasi Sekarang</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="card" style="width: 15rem;">
-            <img class="card-img-top" src="assets/img/content/palu-01.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Peduli Rakyat Palu</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <a href="<?= base_url();?>content/content2controller" class="btn card-button">Donasi Sekarang</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="card" style="width: 15rem;">
-            <img class="card-img-top" src="assets/img/content/sinabung-01.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Bantu Rakyat Sinabung</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <a href="<?= base_url();?>content/content3controller" class="btn card-button">Donasi Sekarang</a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
