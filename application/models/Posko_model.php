@@ -4,7 +4,20 @@ class Posko_model extends CI_Model{
 
     public function getAllPosko()
     {
-        return $this->db->get('posko')->result_array();
+        $query = $this->db->query("SELECT * FROM posko ORDER BY id_posko DESC")->result_array();
+        return $query;
+    }
+
+    public function getPoskoById($id)
+    {
+        return $this->db->get_where('posko', ['id_posko' => $id])->row_array();
+    }
+
+    public function getTotalPosko()
+    {
+        $this->db->select('COUNT(nama_posko) as total');
+        $this->db->from('posko');
+        return $this->db->get()->row()->total; 
     }
 
     public function hapusDataPosko($id)
@@ -35,5 +48,12 @@ class Posko_model extends CI_Model{
   
         $this->db->insert('posko', $data);
 
+    }
+
+    public function cariDataPosko()
+    {
+        $keyword = $this->input->post('keyword', true);
+        $this->db->like('nama_posko', $keyword);
+        return $this->db->get('posko')->result_array();
     }
 }

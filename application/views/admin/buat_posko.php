@@ -4,8 +4,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header" data-background-color="purple">
-                        <h4 class="title">Insert Profile</h4>
-                        <p class="category">Complete your profile</p>
+                        <h4 class="title">Buat Posko</h4>
                     </div>
                     <div class="card-content">
                         <form method="post">
@@ -29,7 +28,22 @@
                                         </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary pull-right">Insert Profile</button>
+                            <div class="row">
+								<div class="col-md-6">
+									<div class="form-group label-floating">
+										<label class="control-label">Nama Anggota</label>
+										<select class="material-selected form-control" name="username">
+                                            <?php foreach ($petugas as $pts) : ?>
+											<option value="<?= $pts['username']; ?>">
+												<?= $pts['nama_depan'];?> <?=$pts['nama_belakang'];?>
+											</option>
+											<?php endforeach; ?>
+										</select>
+									</div>
+								</div>
+							</div>
+                            <div class="flash-data2" data-flashdata2="<?= $this->session->flashdata('flash');?>"></div>
+                            <button type="submit" class="btn btn-primary pull-right">Tambahkan</button>
                             <div class="clearfix"></div>
                         </form>
                     </div>

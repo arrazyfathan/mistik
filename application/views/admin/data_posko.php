@@ -32,6 +32,9 @@
 							<?php endforeach; ?>
 							</tbody>
 						</table>
+						<?php if(empty($posko)) : ?>
+									<div class="title text-center text-warning"><h3>DATA TIDAK DITEMUKAN</h3></div>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>

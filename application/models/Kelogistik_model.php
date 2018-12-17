@@ -4,7 +4,8 @@ class Kelogistik_model extends CI_Model
 {
     public function getAllKelogistik()
     {
-        return $this->db->get('kelogistik')->result_array();
+        $query = $this->db->query("SELECT * FROM kelogistik ORDER BY id_logistik DESC")->result_array();
+        return $query;
     }
 
     public function tambahDataKelogistik()
@@ -21,5 +22,19 @@ class Kelogistik_model extends CI_Model
 
     }
 
+    public function hapusDataKelogistik($id)
+    {
+        $this->db->delete('kelogistik', array('id_logistik' => $id));
+    }
+
+
+    public function cariDataKelogistik()
+    {
+        $keyword = $this->input->post('keyword', true);
+        $this->db->like('nama_barang', $keyword);
+        $this->db->or_like('jenis_barang', $keyword);
+        $this->db->or_like('stok_kebutuhan', $keyword);
+        return $this->db->get('kelogistik')->result_array();
+    }
 
 }

@@ -16,9 +16,17 @@
         <!--  CSS for Demo Purpose, don't include it in your project     -->
     
         <!--     Fonts and icons     -->
-        
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+
+        <!-- Mapbox -->
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+
+        <!-- Chart.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    
+    
     </head>
 
     <body>
@@ -48,6 +56,12 @@
                             <a href="<?php echo base_url() . 'admin/profileBencana' ?>">
                                 <i class="material-icons">poll</i>
                                 <p>Data Program</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url() . 'admin/profileLogistik' ?>">
+                                <i class="material-icons">assignment_late</i>
+                                <p>Data Kelogistik</p>
                             </a>
                         </li>
                         <li>
@@ -131,16 +145,16 @@
                                     </a>
                                 </li>
                             </ul>
-                            <!-- <form class="navbar-form navbar-right" role="search">
+                            <form class="navbar-form navbar-right" role="search" action="" method="post">
                                 <div class="form-group  is-empty">
-                                    <input type="text" class="form-control" placeholder="Search">
+                                    <input type="text" class="form-control" placeholder="Search" name="keyword">
                                     <span class="material-input"></span>
                                 </div>
-                                <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                                <button type="submit" class="btn btn-white btn-round btn-just-icon not-found">
                                     <i class="material-icons">search</i>
                                     <div class="ripple-container"></div>
                                 </button>
-                            </form> -->
+                            </form>
                         </div>
                     </div>
                 </nav>

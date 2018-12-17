@@ -4,7 +4,13 @@ class Petugas_model extends CI_model
 {
     public function getAllPetugas()
     {
-        return $this->db->get('petugas')->result_array();
+        $query = $this->db->query("SELECT * FROM petugas ORDER BY id_petugas DESC")->result_array();
+        return $query;
+    }
+
+    public function getPetugasById($id)
+    {
+        return $this->db->get_where('petugas', ['id_petugas' => $id])->row_array();
     }
 
     public function tambahDataPetugas()
@@ -49,6 +55,21 @@ class Petugas_model extends CI_model
 
         $this->db->where('id_petugas', $id);
         $this->db->update('petugas', $data);
+    }
+
+    public function cariDataPetugas()
+    {
+        $keyword = $this->input->post('keyword', true);
+        $this->db->like('nama_depan', $keyword);
+        $this->db->or_like('nama_belakang', $keyword);
+        $this->db->or_like('no_telepon', $keyword);
+        $this->db->or_like('ttl', $keyword);
+        $this->db->or_like('agama', $keyword);
+        $this->db->or_like('jenis_kelamin', $keyword);
+        $this->db->or_like('jenis_identitas', $keyword);
+        $this->db->or_like('no_identitas', $keyword);
+        $this->db->or_like('alamat', $keyword);
+        return $this->db->get('petugas')->result_array();
     }
     
 }

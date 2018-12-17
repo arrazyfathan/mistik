@@ -20,8 +20,8 @@
                             <div class="row">
                             <div class="col-md-6">
                                     <div class="form-group label-floating is-empty">
-                                        <label class="control-label">Nama Posko</label>
-                                        <input type="text" class="form-control" name="nama-posko">
+                                        <label class="">Nama Posko</label>
+                                        <input type="text" class="form-control" name="nama-posko" value="<?= $posko['nama_posko']; ?>">
                                         <span class="material-input"></span>
                                         <?php if (validation_errors()) : ?>
                                             <small><span class="text-danger"><?= form_error('nama-posko'); ?></span></small>
@@ -29,7 +29,7 @@
                                         </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+                            <button type="submit" class="btn btn-primary pull-right">Tambahkan</button>
                             <div class="clearfix"></div>
                         </form>
                     </div>

@@ -5,7 +5,10 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header" data-background-color="purple">
-						<h4 class="title">Tabel Daftar Program</h4>
+						<h4 class="title">Tabel Daftar Program
+						<a href="<?php echo base_url() . 'admin/buatProgram' ?>">
+						<i class="material-icons float-right">add</i>
+						</h4>
 						<p class="category">Daftar Program Bantuan Bencana</p>
 					</div>
 					<div class="card-content table-responsive">
@@ -35,6 +38,9 @@
 							<?php endforeach; ?>
 							</tbody>
 						</table>
+						<?php if(empty($bencana)) : ?>
+									<div class="title text-center text-warning"><h3>DATA TIDAK DITEMUKAN</h3></div>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>

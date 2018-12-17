@@ -5,7 +5,7 @@
 			<div class="col-md-6">
 				<div class="card">
 					<div class="card-header" data-background-color="purple">
-						<h4 class="title">Detail Posko</h4>
+						<h4 class="title">Detail Posko : <?= $posko['nama_posko']; ?></h4>
 					</div>
 					<div class="card-content table-responsive">
 						<table class="table table-hover">
@@ -15,12 +15,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php foreach ($posko as $psk) : ?>
-								<tr>
-									<td class=""> <?= $psk['nama_posko']; ?></td>
-									</td>
-								</tr>
-							<?php endforeach; ?>
+								
 							</tbody>
 						</table>
 					</div>

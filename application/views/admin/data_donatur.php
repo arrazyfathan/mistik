@@ -1,7 +1,7 @@
 <div class="content">
 	<div class="container-fluid">
 		<div class="row">
-            <!-- Daftar Donatur -->
+			<!-- Daftar Donatur -->
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header" data-background-color="purple">
@@ -20,25 +20,37 @@
 								</tr>
 							</thead>
 							<tbody>
+
 								<?php foreach ($donatur as $dtr) : ?>
 								<tr>
-									<td> <?= $dtr['nama_lengkap']; ?></td>
-									<td> <?= $dtr['email']; ?></td>
-									<td> <?= $dtr['alamat']; ?></td>
-									<td> <?= $dtr['no_telepon']; ?> </td>
+									<td>
+										<?= $dtr['nama_lengkap']; ?>
+									</td>
+									<td>
+										<?= $dtr['email']; ?>
+									</td>
+									<td>
+										<?= $dtr['alamat']; ?>
+									</td>
+									<td>
+										<?= $dtr['no_telepon']; ?>
+									</td>
 									<!-- Menghapus data -->
 									<td class="text-center">
-									<a href="<?= base_url() ?>admin/editDonatur/<?= $dtr['id_donatur']; ?>" class="badge badge-warning">Edit </a>
-									<a href="<?= base_url() ?>admin/hapusDonatur/<?= $dtr['id_donatur']; ?>" class="badge badge-danger tombol-hapus">Hapus</a>
+										<a href="<?= base_url() ?>admin/editDonatur/<?= $dtr['id_donatur']; ?>" class="badge badge-warning">Edit </a>
+										<a href="<?= base_url() ?>admin/hapusDonatur/<?= $dtr['id_donatur']; ?>" class="badge badge-danger tombol-hapus">Hapus</a>
 									</td>
 								</tr>
-							<?php endforeach; ?>
+								<?php endforeach; ?>
 							</tbody>
 						</table>
+						<?php if(empty($donatur)) : ?>
+						<div class="title text-center text-warning"><h3>DATA TIDAK DITEMUKAN</h3></div>
+						<?php endif; ?>	
 					</div>
 				</div>
 			</div>
-            <!-- End Daftar Donatur -->
+			<!-- End Daftar Donatur -->
 		</div>
 	</div>
 </div>

@@ -20,8 +20,8 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group label-floating is-empty">
-                                        <label class="control-label">Nama Lengkap</label>
-                                        <input type="text" class="form-control" name="nama-lengkap">
+                                        <label class="">Nama Lengkap</label>
+                                        <input type="text" class="form-control" name="nama-lengkap" value="<?= $donatur['nama_lengkap']; ?>">
                                         <span class="material-input"></span>
                                         <?php if (validation_errors()) : ?>
                                             <small><span class="text-danger"><?= form_error('nama-lengkap'); ?></span></small>
@@ -32,8 +32,8 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group label-floating is-empty">
-                                        <label class="control-label">No. Telepon</label>
-                                        <input type="text" class="form-control" name="notelp">
+                                        <label class="">No. Telepon</label>
+                                        <input type="text" class="form-control" name="notelp" value="<?= $donatur['no_telepon']; ?>">
                                         <span class="material-input"></span>
                                         <?php if (validation_errors()) : ?>
                                             <small><span class="text-danger"><?= form_error('notelp'); ?></span></small>
@@ -44,8 +44,8 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group label-floating is-empty">
-                                        <label class="control-label">Alamat</label>
-                                        <input type="text" class="form-control" name="alamat">
+                                        <label class="">Alamat</label>
+                                        <input type="text" class="form-control" name="alamat" value="<?= $donatur['alamat']; ?>">
                                         <span class="material-input"></span>
                                         <?php if (validation_errors()) : ?>
                                             <small><span class="text-danger"><?= form_error('alamat'); ?></span></small>

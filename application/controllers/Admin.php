@@ -6,6 +6,7 @@ class Admin extends CI_Controller {
                 $this->load->model('Bencana_model');
                 $this->load->model('Donatur_model');
                 $this->load->model('Petugas_model');
+                $this->load->model('Kelogistik_model');
                 $this->load->model('Posko_model');
                 $this->load->library('form_validation');
 
@@ -16,30 +17,51 @@ class Admin extends CI_Controller {
                 }
         }
         function index(){
-                $data['bencana'] = $this->Bencana_model->getAllBencana();
-                $data['petugas'] = $this->Petugas_model->getAllPetugas();
-                $data['donatur'] = $this->Donatur_model->getAllDonatur();
+                $data['posko'] = $this->Posko_model->getTotalPosko();
+                $data['program'] = $this->Bencana_model->getTotalProgram();
+                $data['pengungsi'] = $this->Bencana_model->getTotalPengungsi();
+                $data['grafik'] = $this->Bencana_model->getGrafikBencana();
                 $this->template->load('admin/template', 'admin/dashboard', $data);
         }
         
         function profileBencana() {
                 $data['bencana'] = $this->Bencana_model->getAllBencana();
+                if($this->input->post('keyword')){
+                        $data['bencana'] = $this->Bencana_model->cariDataBencana();
+                }
                 $this->template->load('admin/template', 'admin/data_program', $data);
+        }
+
+        function profileLogistik() {
+                $data['kelogistik'] = $this->Kelogistik_model->getAllKelogistik();
+                if($this->input->post('keyword')){
+                        $data['kelogistik'] = $this->Kelogistik_model->cariDataKelogistik();
+                }
+                $this->template->load('admin/template', 'admin/data_logistik', $data);
         }
         
         function profilePetugas() {
                 $data['petugas'] = $this->Petugas_model->getAllPetugas();
+                if($this->input->post('keyword')){
+                        $data['petugas'] = $this->Petugas_model->cariDataPetugas();
+                }
                 $this->template->load('admin/template', 'admin/data_relawan', $data);
         }
         
         function profileDonatur() {
                 $data['donatur'] = $this->Donatur_model->getAllDonatur();
+                if($this->input->post('keyword')){
+                        $data['donatur'] = $this->Donatur_model->cariDataDonatur();
+                }
                 $this->template->load('admin/template', 'admin/data_donatur', $data);
         }
 
         function profilePosko() {
                 $data['petugas'] = $this->Petugas_model->getAllPetugas();
                 $data['posko'] = $this->Posko_model->getAllPosko();
+                if($this->input->post('keyword')){
+                        $data['posko'] = $this->Posko_model->cariDataPosko();
+                }
                 $this->template->load('admin/template', 'admin/data_posko', $data);
         }
 
@@ -53,6 +75,13 @@ class Admin extends CI_Controller {
                 $this->Bencana_model->hapusDataBencana($id);
                 $this->session->set_flashdata('flash', 'Dihapus');
                 redirect('admin/profileBencana');
+        } 
+
+        public function hapusLogistik($id)
+        {
+                $this->Kelogistik_model->hapusDataKelogistik($id);
+                $this->session->set_flashdata('flash', 'Dihapus');
+                redirect('admin/profileLogistik');
         }
         
         public function hapusPetugas($id)
@@ -82,7 +111,7 @@ class Admin extends CI_Controller {
         // EDIT DATA BENCANA
         public function editBencana($id)
         {
-                $data['bencana'] = $this->Bencana_model->getAllBencana();
+                $data['bencana'] = $this->Bencana_model->getBencanaById($id);
                 
                 $config = array(
                         array(
@@ -124,7 +153,7 @@ class Admin extends CI_Controller {
         // EDIT DATA PETUGAS
         public function editPetugas($id)
         {
-                $data['petugas'] = $this->Petugas_model->getAllPetugas();
+                $data['petugas'] = $this->Petugas_model->getPetugasById($id);
                 
                 $config = array(
                         array(
@@ -167,7 +196,7 @@ class Admin extends CI_Controller {
         public function editDonatur($id)
         {
                 
-                $data['donatur'] = $this->Donatur_model->getAllDonatur();
+                $data['donatur'] = $this->Donatur_model->getDonaturById($id);
                 
                 $config = array(
                         array(
@@ -207,7 +236,7 @@ class Admin extends CI_Controller {
         public function editPosko($id)
         {
                 
-                $data['posko'] = $this->Posko_model->getAllPosko();
+                $data['posko'] = $this->Posko_model->getPoskoById($id);
                 
                 $config = array(
                         array(
@@ -238,7 +267,7 @@ class Admin extends CI_Controller {
 
         function buatPosko() {
 
-                
+                $data['petugas'] = $this->Petugas_model->getAllPetugas();
                 $config = array(
                         array(
                                 'field' => 'nama-posko',
@@ -251,12 +280,46 @@ class Admin extends CI_Controller {
                 
                 if ($this->form_validation->run() == false) {
                         
-                        $this->template->load('admin/template', 'admin/buat_posko');
+                        $this->template->load('admin/template', 'admin/buat_posko', $data);
                         
                 } else {
                         $this->Posko_model->tambahDataPosko();
                         $this->session->set_flashdata('flash', 'Ditambah');
-                        redirect('admin/profilePosko');
+                        redirect('admin/buatPosko');
+                }
+        }
+
+        function buatProgram() {
+
+                
+                $config = array(
+                        array(
+                                'field' => 'nama-program',
+                                'label' => 'Program name',
+                                'rules' => 'required'
+                        ),
+                        array(
+                                'field' => 'jumlah-pengungsi',
+                                'label' => 'refuges',
+                                'rules' => 'required|numeric'
+                        ),
+                        array(
+                                'field' => 'deskripsi',
+                                'label' => 'Description',
+                                'rules' => 'required'
+                        ),
+                );
+                
+                $this->form_validation->set_rules($config);
+                
+                if ($this->form_validation->run() == false) {
+                        
+                        $this->template->load('admin/template', 'admin/buat_program');
+                        
+                } else {
+                        $this->Bencana_model->tambahDataBencana();
+                        $this->session->set_flashdata('flash', 'Ditambah');
+                        redirect('admin/buatProgram');
                 }
         }
 
@@ -268,9 +331,10 @@ class Admin extends CI_Controller {
         // ----------------------------
         // DETAIL DATA POSKO
 
-        function detailPosko() {
+        function detailPosko($id) {
 
-                $data['posko'] = $this->Posko_model->getAllPosko();
+                $data['posko'] = $this->Posko_model->getPoskoById($id);
+                $data['petugas'] = $this->Petugas_model->getPetugasById($id);
                 $this->template->load('admin/template', 'admin/detail_posko', $data);
         }
 

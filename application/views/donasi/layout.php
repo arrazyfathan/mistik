@@ -38,7 +38,7 @@
              <!--        <a class="nav-item nav-link active " href="#home">Home <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link " href="#program">Program</a>
                     <a class="nav-item nav-link " href="#contact">Contact</a> -->
-                    <a class="nav-item nav-link " href="#about">Hi, <?php echo $this->session->userdata('username');?></a>
+                    <a class="nav-item nav-link " href="#about">Hi, <?php echo $this->session->userdata('nama_lengkap');?></a>
                     <a class="nav-item btn tombol " href="<?php echo base_url().'login_donatur/logout'?>">Logout</a>
                 </div>
             </div>

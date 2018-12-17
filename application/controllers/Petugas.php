@@ -20,6 +20,9 @@
             $data['bencana'] = $this->Bencana_model->getAllBencana();
             $data['petugas'] = $this->Petugas_model->getAllPetugas();
             $data['donatur'] = $this->Donatur_model->getAllDonatur();
+            $data['posko'] = $this->Posko_model->getTotalPosko();
+            $data['program'] = $this->Bencana_model->getTotalProgram();
+            $data['pengungsi'] = $this->Bencana_model->getTotalPengungsi();
             $this->template->load('petugas/template', 'petugas/dashboard', $data);
         }
         

@@ -61,6 +61,7 @@ class Daftar_donatur extends CI_Controller
 
                 if ($this->form_validation->run() == false) {
 
+                        // $this->load->view('template/header');
                         $this->load->view('daftar donatur/index');
 
                 } else {
