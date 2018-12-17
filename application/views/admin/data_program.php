@@ -4,18 +4,18 @@
 			<!-- Daftar Program -->
 			<div class="col-md-12">
 				<div class="card">
-					<div class="card-header" data-background-color="purple">
+					<div class="card-header" data-background-color="blue">
 						<h4 class="title">Tabel Daftar Program
 						<a href="<?php echo base_url() . 'admin/buatProgram' ?>">
-						<i class="material-icons float-right">add</i>
+						<i class="material-icons float-right" style="border-radius:100px; background-color:#fff; color:#0CB5C9;">add</i>
 						</h4>
 						<p class="category">Daftar Program Bantuan Bencana</p>
 					</div>
 					<div class="card-content table-responsive">
-						<table class="table">
+						<table class="table table-hover">
 							<thead class="text-primary">
 								<tr>
-									<th>Nama Program</th>
+									<th >Nama Program</th>
 									<th>Jenis Bencana</th>
 									<th>Jumlah Pengungsi</th>
 									<th>Deskripsi</th>

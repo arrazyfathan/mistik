@@ -4,7 +4,7 @@
             <!-- Daftar Petugas -->
 			<div class="col-md-12">
 				<div class="card">
-					<div class="card-header" data-background-color="purple">
+					<div class="card-header" data-background-color="blue">
 						<h4 class="title">Tabel Daftar Petugas</h4>
 						<p class="category"> Daftar Relawan Program Bantuan Bencana</p>
 					</div>

@@ -3,19 +3,11 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header" data-background-color="purple">
-                        <h4 class="title">Buat Posko</h4>
+                    <div class="card-header" data-background-color="blue">
+                        <h4 class="title">Tambahkan Posko</h4>
                     </div>
                     <div class="card-content">
                         <form method="post">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="control-label">Company (disabled)</label>
-                                        <input type="text" class="form-control" disabled="">
-                                        <span class="material-input"></span></div>
-                                </div>
-                            </div>
                             <div class="row">
                             <div class="col-md-6">
                                     <div class="form-group label-floating is-empty">
@@ -31,7 +23,7 @@
                             <div class="row">
 								<div class="col-md-6">
 									<div class="form-group label-floating">
-										<label class="control-label">Nama Anggota</label>
+										<label class="control-label">Nama Petugas</label>
 										<select class="material-selected form-control" name="username">
                                             <?php foreach ($petugas as $pts) : ?>
 											<option value="<?= $pts['username']; ?>">
@@ -43,7 +35,7 @@
 								</div>
 							</div>
                             <div class="flash-data2" data-flashdata2="<?= $this->session->flashdata('flash');?>"></div>
-                            <button type="submit" class="btn btn-primary pull-right">Tambahkan</button>
+                            <button type="submit" class="btn btn-primary pull-right" data-background-color="blue">Tambahkan</button>
                             <div class="clearfix"></div>
                         </form>
                     </div>
@@ -62,7 +54,7 @@
                         <p class="card-content">
                             Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
                         </p>
-                        <a href="#pablo" class="btn btn-primary btn-round">Follow</a>
+                        <a href="#pablo" class="btn btn-primary btn-round" >Follow</a>
                     </div>
                 </div>
             </div>

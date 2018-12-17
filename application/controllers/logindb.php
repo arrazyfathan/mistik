@@ -17,7 +17,7 @@ class logindb extends CI_Controller{
 
         if($cek_bdpb->num_rows() > 0){// Jika login dengan BDPB
                 $data=$cek_bdpb->row_array();
-                $this->session->set_userdata('masuk',TRUE);
+                $this->session->set_userdata('masuk_admin',TRUE);
                 $this->session->set_userdata('akses','1');
                 $this->session->set_userdata('ses_id',$data['id']);
                 $this->session->set_userdata('ses_nama',$data['nama']);
@@ -26,7 +26,7 @@ class logindb extends CI_Controller{
             $cek_petugas=$this->logindb_model->auth_petugas($username,$password);
             if($cek_petugas->num_rows() > 0) {
                 $data=$cek_petugas->row_array();
-                $this->session->set_userdata('masuk',TRUE);
+                $this->session->set_userdata('masuk_petugas',TRUE);
                 $this->session->set_userdata('akses','2');
                 $this->session->set_userdata('ses_id',$data['id']);
                 $this->session->set_userdata('ses_nama',$data['nama_depan']);

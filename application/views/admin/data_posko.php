@@ -4,10 +4,10 @@
             <!-- Daftar Petugas -->
 			<div class="col-md-12">
 				<div class="card">
-					<div class="card-header" data-background-color="purple">
+					<div class="card-header" data-background-color="blue">
 					<h4 class="title">Tabel Daftar Posko
 					<a href="<?php echo base_url() . 'admin/buatPosko' ?>">
-                    <i class="material-icons float-right">add</i>
+                    <i class="material-icons float-right" style="border-radius:100px; background-color:#fff; color:#0CB5C9;">add</i>
 					</h4>
 						<p class="category"> Daftar Posko Program Bantuan Bencana</p>
 					</div>

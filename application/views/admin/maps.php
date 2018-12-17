@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card">
-					<div class="card-header" data-background-color="purple">
+					<div class="card-header" data-background-color="blue">
 						<h4 class="title">Data Persebaran Lokasi Posko</h4>
 					</div>
                     <!-- Mapbox -->
