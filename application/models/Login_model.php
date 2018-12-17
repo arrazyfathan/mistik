@@ -5,7 +5,6 @@ class Login_model extends CI_Model
     public function login($username, $password)
     {
         // $check = $this->db->get_where('donatur', array('username' => $username, 'password' => $password));
-
         $this->db->where('username', $username);
         $this->db->where('password', md5($password));
         $query = $this->db->get('donatur');
@@ -15,5 +14,8 @@ class Login_model extends CI_Model
         } else {
             return false;
         }
+
+        
     }
+
 }

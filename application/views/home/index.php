@@ -35,7 +35,7 @@
           Mari bantu saudara-saudara kita dengan mendonasikan
           sebagian<br> harta kita atau menjadi relawan.</p>
 
-        <a class="btn tombol1" href="<?= base_url();?>login_donatur">Donasi Sekarang</a><a class="btn tombol1" href="<?= base_url();?>daftar_relawan">Jadi
+        <a class="btn tombol1" href="<?= base_url();?>donasicontroller">Donasi Sekarang</a><a class="btn tombol1" href="<?= base_url();?>daftar_relawan">Jadi
           Relawan</a>
       </div>
     </div>
@@ -45,7 +45,7 @@
 
   <!-- Programs -->
   <section id="program">
-    <div class="container-fluid programs">
+    <div class="container-fluid programs">  
       <div class="row">
         <p class="programs-text">PROGRAM</p>
       </div>
@@ -96,7 +96,7 @@
         </div>
       </div>
       <div class="d-flex justify-content-center">
-        <a href="" class="btn more">Lihat semua</a>
+        <a href="<?= base_url();?>programcontroller" class="btn more">Lihat semua</a>
       </div>
     </div>
   </section>

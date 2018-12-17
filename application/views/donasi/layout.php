@@ -20,6 +20,8 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/mistik.ico">
+    <link rel="shortcut icon" href="<?php echo base_url('assets/img/favicon.ico')?>">
+
 
     <title>Donasi</title>
 </head>
@@ -35,10 +37,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
-             <!--        <a class="nav-item nav-link active " href="#home">Home <span class="sr-only">(current)</span></a>
+                    <!--<a class="nav-item nav-link active " href="#home">Home <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link " href="#program">Program</a>
                     <a class="nav-item nav-link " href="#contact">Contact</a> -->
+
                     <a class="nav-item nav-link " href="#about">Hi, <?php echo $this->session->userdata('nama_lengkap');?></a>
+
+                    <a class="nav-item nav-link " >Hi, <?php echo $this->session->userdata('username');?></a>
+
                     <a class="nav-item btn tombol " href="<?php echo base_url().'login_donatur/logout'?>">Logout</a>
                 </div>
             </div>
@@ -63,7 +69,7 @@
                                 <p class="card-text">Donasi via transfer bank<br>dan Donasi 24 Jam</p>
                             </div>
                             <div class="card-footer btn btn-donasi">
-                                <a href="#">DONASI SEKARANG</a>
+                                <a href="<?= base_url();?>donasi_uang">DONASI SEKARANG</a>
                             </div>
                         </div>
                     </div>
@@ -74,7 +80,7 @@
                                 <p class="card-text">Donasi non-tunai dalam <br>bentuk barang fisik</p>
                             </div>
                             <div class="card-footer btn btn-donasi">
-                                <a href="#">DONASI SEKARANG</a>
+                                <a href="<?= base_url();?>donasi_barang">DONASI SEKARANG</a>
                             </div>
                         </div>
                     </div>
