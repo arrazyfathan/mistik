@@ -1,47 +1,4 @@
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="assets/img/logo.svg" alt=" logo"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#home">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#program">Program</a>
-          <a class="nav-item nav-link" href="#contact">Contact</a>
-          <a class="nav-item nav-link" href="#about"><span>About</span></a>
-          <a class="nav-item btn tombol" href="<?= base_url();?>daftar_donatur">Sign Up</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <!-- End Navigation -->
-
-
-  <!-- Jumbotron -->
-  <section id="home">
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container-fluid">
-        <h1 class="display-4">Sistem Distribusi<br> Logistik</h1>
-        <p>Platform yang digunakan untuk menyalurkan bantuan
-          kepada para korban<br> bencana alam, agar pasokan bantuan
-          tersebar secara merata.<br><br>
-
-          Mari bantu saudara-saudara kita dengan mendonasikan
-          sebagian<br> harta kita atau menjadi relawan.</p>
-
-        <a class="btn tombol1" href="<?= base_url();?>donasicontroller">Donasi Sekarang</a><a class="btn tombol1" href="<?= base_url();?>daftar_relawan">Jadi
-          Relawan</a>
-      </div>
-    </div>
-  </section>
-  <!-- End Jumbotron -->
-
-
-  <!-- Programs -->
-  <section id="program">
+<section id="program">
     <div class="container-fluid programs">  
       <div class="row">
         <p class="programs-text">PROGRAM</p>
@@ -92,78 +49,9 @@
           </div>
         </div>
       </div>
-      <div class="d-flex justify-content-center">
-        <a href="<?= base_url();?>programcontroller" class="btn more">Lihat semua</a>
-      </div>
     </div>
   </section>
   <!-- End Programs -->
-
-  <!-- Why  -->
-  <div class="container-fluid feature">
-    <div class="row">
-      <div class="col-lg-8">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"">
-          <ol class="
-          carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner" style="border-radius: 10px;">
-            <div class="carousel-item active">
-              <img class="d-block w-100" src="assets/img/Slide/1.jpg" alt="First slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="assets/img/Slide/2.jpg" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="assets/img/Slide/3.jpg" alt="Third slide">
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <h4 class="feature-text">Ayo donasi sekarang</h4>
-        <p class="feature-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, error. Voluptatem amet
-          ratione eos quibusdam sint molestiae. Ipsa quaerat quod commodi quis placeat iure, libero amet magnam error
-          vero totam?</p>
-        <a href="" class="btn ayo-donasi">Ayo Donasi</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- End Why -->
-
-  <!-- Contact -->
-  <section id="contact">
-    <div class="container-fluid contact">
-      <div class="row">
-        <div class="col">
-          <h3>Hubungi Kami</h3>
-          <p>Kesulitan dalam melakukan donasi? Kami siap melayani anda 24 Jam.<br> Hubungi kami melalui cara berikut
-            ini
-            :</p>
-          <div class="d-flex justify-content-center">
-            <button class="btn cs"><i class="fas fa-phone"></i> Customer Service</button> <button class="btn email"><i
-                class="fas fa-at" style="font-size:18px; color: white;"></i></i> Email</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- End contact -->
-
-
   <!-- Footer -->
   <footer class="page-footer font-small unique-color-dark foot">
     <div class="social" style="background-color: rgb(56, 128, 125);">
@@ -277,6 +165,3 @@
     <!-- Copyright -->
   </footer>
   <!-- End Footer -->
-
-
-  

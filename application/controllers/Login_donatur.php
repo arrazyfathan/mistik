@@ -13,9 +13,6 @@ class Login_donatur extends CI_Controller
     public function index()
     {
         $data['judul'] = 'Login Donatur';
-        // $this->load->view('templates/header', $data);
-        // $this->load->view('app/login/index');
-        // $this->load->view('templates/footer');
 
         $config = array(
             array(
@@ -37,17 +34,21 @@ class Login_donatur extends CI_Controller
             $username = $this->input->post('username');
             $password = $this->input->post('password');
             $this->load->model('Login_model');
-            if ($this->Login_model->login($username, $password)) {
 
+
+            if ($this->Login_model->login($username, $password)) {
+                
                 $session_data = array(
                     'username' => $username
+
                 );
                 $this->session->set_userdata($session_data);
-                $this->session->set_userdata('masuk',TRUE);
-                redirect(/*base_url() .*/'login_donatur/enter');
+                $this->session->set_userdata('logedin',TRUE);
+                $nama = $this->session->userdata('nama_Lengkap');
+                redirect('login_donatur/enter');
             } else {
                 $this->session->set_flashdata('error', 'Invalid Username and Password');
-                redirect(/*base_url() .*/'login_donatur');
+                redirect('login_donatur');
             }
 
         } else {
@@ -55,27 +56,17 @@ class Login_donatur extends CI_Controller
             $this->load->view('login_donatur/index');
 
         }
-        
-        // if (isset($_POST['submit'])) {
-        //     $username = $this->input->post['username'];
-        //     $password = $this->input->post['password'];
-        //     $success = $this->Login_model->login($username, $password);
-        //     echo $success;
-        // } else {
-        // $this->load->view('templates/header', $data);
-        // $this->load->view('login/index');
-        // $this->load->view('templates/footer');
-        // }
+    
     }
+
+
 
     function enter()
     {
         if ($this->session->userdata('username') != '') {
-            // echo '<h2> Welcome - ' . $this->session->userdata('username') . '</h2>';
-            // echo '<label><a href="' . base_url() . 'Login">Logout</a></label>';
             redirect('donasicontroller');
         } else {
-            redirect(/*base_url() .*/'login');
+            redirect('login');
         }
 
 
@@ -83,11 +74,9 @@ class Login_donatur extends CI_Controller
 
     function Logout()
         {
-            // $this->session->unset_userdata('username');
-            // redirect('login_donatur');
             $this->session->sess_destroy();
-        $url=base_url('login_donatur');
-        redirect($url);
+            $url=base_url('login_donatur');
+            redirect($url);
         }
 
 }

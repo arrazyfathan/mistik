@@ -39,7 +39,7 @@
           <a class="nav-item nav-link " href="home/#program">Program</a>
           <a class="nav-item nav-link " href="#contact">Contact</a>
           <a class="nav-item nav-link " href="#about">About</a>
-          <a class="nav-item btn tombol " href="login.html">Login</a>
+          <a class="nav-item btn tombol " href="<?= base_url(); ?>petugas">Login</a>
         </div>
       </div>
     </div>

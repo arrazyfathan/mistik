@@ -47,11 +47,11 @@
   </nav>
   <!-- End Navbar -->
   <div class="container-fluid uang">
-    <h3>DONASI UANG</h3>
+    <h3>DONASI BARANG</h3>
     <div class="container">
       <div class="row">
         <div class="col-6 formm">
-          <div class="form-group" >
+          <div class="form-group" hidden>
             <label>Ambil data user yang login</label>
             <input type="text" class="form-control" id="exampleFormControlInput1" value="<?php echo $this->session->userdata('username');?>">
           </div>
@@ -101,7 +101,7 @@
               <label class="form-check-label" for="inlineRadio6"><img class="bank-img" src="assets/img/bank/permata.png" alt=""></label>
             </div>  
           </div>
-          <button class="btn btn-kirim">Kirim</button>
+          <button class="btn btn-default">Kirim</button>
         </div>
         <div class="col-6">
 

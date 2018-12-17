@@ -142,10 +142,20 @@ label {
 	font-weight: 600;
 }
 
-/* .uang {
-    background-image: url(/img/bg-doonasi.png);
-    background-size: cover;
-    position: absolute;
-    height: 700px;
+.uang {
+	margin-bottom: 40px;
+}
 
-} */
+.btn-kirim {
+	background-color: #E38813;
+	width: 130px;
+	margin-left: -70px;
+	margin-top: 10px;
+	color: #fff;
+
+}
+
+.btn-kirim:hover {
+	background-color: rgb(156, 92, 8);
+
+}

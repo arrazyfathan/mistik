@@ -74,7 +74,7 @@
                                 <p class="card-text">Donasi non-tunai dalam <br>bentuk barang fisik</p>
                             </div>
                             <div class="card-footer btn btn-donasi">
-                                <a href="#">DONASI SEKARANG</a>
+                                <a href="<?= base_url();?>donasi_barang">DONASI SEKARANG</a>
                             </div>
                         </div>
                     </div>

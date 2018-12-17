@@ -39,7 +39,7 @@
           <a class="nav-item nav-link " href="#program">Program</a>
           <a class="nav-item nav-link " href="#contact">Contact</a>
           <a class="nav-item nav-link " href="#about">About</a>
-          <a class="nav-item btn tombol " href="login_donatur">Login</a>
+          <a class="nav-item btn tombol " href="<?= base_url();?>donasicontroller">Login</a>
         </div>
       </div>
     </div>
