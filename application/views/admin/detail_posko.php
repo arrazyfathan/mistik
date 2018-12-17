@@ -4,7 +4,7 @@
             <!-- Daftar Petugas -->
 			<div class="col-md-6">
 				<div class="card">
-					<div class="card-header" data-background-color="purple">
+					<div class="card-header" data-background-color="blue">
 						<h4 class="title">Detail Posko : <?= $posko['nama_posko']; ?></h4>
 					</div>
 					<div class="card-content table-responsive">
@@ -21,7 +21,7 @@
 					</div>
 				</div>
 			</div>
-            <div class="col-md-6">
+            <!-- <div class="col-md-6">
                 <div class="card card-profile">
                     <div class="card-avatar">
                         <a href="#pablo">
@@ -37,7 +37,7 @@
                         <a href="#pablo" class="btn btn-primary btn-round">Follow</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 		</div>
 	</div>
 </div>

@@ -1,6 +1,6 @@
 <?php
 
-class Donasi_uang extends CI_Controller {
+class InvoiceController extends CI_Controller {
     function __construct(){
         parent:: __construct();
 
@@ -13,12 +13,6 @@ class Donasi_uang extends CI_Controller {
     }
 
     public function index(){
-        $this->load->model('Bencana_model');
-        $data['bencana'] = $this->Bencana_model->getAllBencana();
-        $this->load->view('donasi/uang', $data);
-    }
-
-    function invoice() {
         $this->load->view('donasi/invoice');
     }
 

@@ -11,7 +11,7 @@ class Admin extends CI_Controller {
                 $this->load->library('form_validation');
 
                 //Validasi jika user belum login
-                if($this->session->userdata('masuk') !=TRUE){
+                if($this->session->userdata('masuk_admin') !=TRUE){
                         $url=base_url('logindb');
                         redirect($url);
                 }

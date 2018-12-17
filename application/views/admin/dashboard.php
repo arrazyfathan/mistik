@@ -14,7 +14,7 @@
 						<i class="material-icons">content_copy</i>
 					</div>
 					<div class="card-content">
-						<p class="category">Total Program</p>
+						<p class="category"  style="font-weight:500;">Total Program</p>
 						<h3 class="title">
 							<?php echo $program; ?>
 						</h3>
@@ -31,7 +31,7 @@
 						<i class="material-icons">store</i>
 					</div>
 					<div class="card-content">
-						<p class="category">Total Posko</p>
+						<p class="category"  style="font-weight:500;">Total Posko</p>
 						<h3 class="title">
 							<?php echo $posko; ?>
 						</h3>
@@ -49,7 +49,7 @@
 						<i class="material-icons">group_add</i>
 					</div>
 					<div class="card-content">
-						<p class="category">Total Pengungsi</p>
+						<p class="category"  style="font-weight:500;">Total Pengungsi</p>
 						<h3 class="title">
 							<?php echo $pengungsi; ?>
 						</h3>
@@ -67,7 +67,7 @@
 						<i class="material-icons">local_atm</i>
 					</div>
 					<div class="card-content">
-						<p class="category">Total Donasi</p>
+						<p class="category"  style="font-weight:500;">Total Donasi</p>
 						<h3 class="title">Rp. 1000</h3>
 					</div>
 					<div class="card-footer">
@@ -82,7 +82,9 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card">
-					<div class="card-header" data-background-color="red">
+					<div class="card-header" data-background-color="green">
+					<h4 class="title" style="font-weight:500;">Grafik Jumlah Pengungsi</h4>
+						<p class="category">Jumlah pengungsi berdasarkan data relawan</p>
 					</div>
 					<div class="card-content">
 						<canvas id="myChart" width="150" height="50"></canvas>
@@ -101,8 +103,8 @@
 		<script>
 			let myChart = document.getElementById('myChart').getContext('2d');
 			// Global Options
-			Chart.defaults.global.defaultFontFamily = 'Lato';
-			Chart.defaults.global.defaultFontSize = 11;
+			Chart.defaults.global.defaultFontFamily = 'Roboto';
+			Chart.defaults.global.defaultFontSize = 12;
 			Chart.defaults.global.defaultFontColor = '#777';
 
 			let massPopChart = new Chart(myChart, {
@@ -128,11 +130,11 @@
 					}]
 				},
 				options: {
-					title: {
-						display: true,
-						text: 'Grafik Jumlah Pengungsi',
-						fontSize: 25
-					},
+					// title: {
+					// 	display: true,
+					// 	text: 'Grafik Jumlah Pengungsi',
+					// 	fontSize: 25
+					// },
 					legend: {
 						display: false,
 						position: 'right',
@@ -145,7 +147,7 @@
 							left: 50,
 							right: 0,
 							bottom: 0,
-							top: 0
+							top: 20
 						}
 					},
 					tooltips: {

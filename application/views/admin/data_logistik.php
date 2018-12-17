@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card">
-					<div class="card-header" data-background-color="purple">
+					<div class="card-header" data-background-color="blue">
 					<h4 class="title">Tabel Daftar Kelogistik
 					</h4>
 						<p class="category">Daftar Kekurangan Logistik</p>

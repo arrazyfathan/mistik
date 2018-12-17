@@ -9,14 +9,6 @@
                     <div class="card-content">
                         <form method="post">
                             <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="control-label">Company (disabled)</label>
-                                        <input type="text" class="form-control" disabled="">
-                                        <span class="material-input"></span></div>
-                                </div>
-                            </div>
-                            <div class="row">
                             <div class="col-md-6">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label">Nama Barang</label>
