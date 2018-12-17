@@ -51,17 +51,18 @@
     <div class="container">
       <div class="row">
         <div class="col-6 formm">
-          <div class="form-group" >
+          <div class="form-group" hidden>
             <label>Ambil data user yang login</label>
             <input type="text" class="form-control" id="exampleFormControlInput1" value="<?php echo $this->session->userdata('username');?>">
           </div>
           <div class="form-group programs">
             <label>Pilih Program Donasi :</label>
             <select class="custom-select">
-              <option selected>Pilih Program</option>
-              <option value="1">Bencana Lombok</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+            <?php foreach ($bencana as $bcn) : ?>
+              <option value="<?= $bcn['nama_program']; ?>">
+              <?= $bcn['nama_program']; ?>
+              </option>
+              <?php endforeach; ?>
             </select>
           </div>
           <div class="form-group jumlah">
@@ -101,10 +102,10 @@
               <label class="form-check-label" for="inlineRadio6"><img class="bank-img" src="assets/img/bank/permata.png" alt=""></label>
             </div>  
           </div>
-          <button class="btn btn-kirim">Kirim</button>
+          <a href="<?php echo base_url();?>InvoiceController" class="btn btn-kirim">Kirim</a>
         </div>
         <div class="col-6">
-
+          <img class="img-donation" src="assets/img/donat_uang.png" alt="donation">
         </div>
       </div>
     </div>
@@ -126,5 +127,4 @@
     });
   </script> -->
 </body>
-
 </html>
