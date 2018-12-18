@@ -87,7 +87,7 @@
 						<p class="category">Jumlah pengungsi berdasarkan data relawan</p>
 					</div>
 					<div class="card-content">
-						<canvas id="myChart" width="150" height="50"></canvas>
+						<canvas id="myChart" width="150" height="80" style="margin-top:20px;"></canvas>
 					</div>
 					<div class="card-footer">
 						<div class="stats">

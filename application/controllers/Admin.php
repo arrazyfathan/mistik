@@ -3,6 +3,7 @@ class Admin extends CI_Controller {
         
         function __construct(){
                 parent:: __construct();
+                $this->load->helper('short_number');
                 $this->load->model('Uang_model');
                 $this->load->model('Bencana_model');
                 $this->load->model('Donatur_model');
