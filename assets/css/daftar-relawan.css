@@ -8,7 +8,7 @@
 }
 
 .navbar {
-	background-color: #50B1AE;
+	background-color: #4D9D99;
 	padding: 10px;
 
 }
@@ -37,8 +37,10 @@
 }
 
 .kotak {
-	background-color: #50B1AE;
-	height: 150px;
+	background-image: url(../img/header.png);
+	background-size: cover;
+	height: 400px;
+	margin-top: -250px;
 
 }
 

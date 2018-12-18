@@ -13,8 +13,9 @@ class Donasi_barang extends CI_Controller {
     }
 
     public function index(){
-        
-        $this->load->view('donasi/barang');
+        $this->load->model('Bencana_model');
+        $data['bencana'] = $this->Bencana_model->getAllBencana();
+        $this->load->view('donasi/barang', $data);
     }
 
 }

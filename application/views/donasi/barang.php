@@ -46,65 +46,48 @@
     </div>
   </nav>
   <!-- End Navbar -->
-  <div class="container-fluid uang">
+  <div class="container-fluid barang">
     <h3>DONASI BARANG</h3>
     <div class="container">
       <div class="row">
-        <div class="col-6 formm">
+        <div class="col-6 form">
           <div class="form-group" hidden>
             <label>Ambil data user yang login</label>
             <input type="text" class="form-control" id="exampleFormControlInput1" value="<?php echo $this->session->userdata('username');?>">
           </div>
-          <div class="form-group programs">
+          <div class="form-group programs atas">
             <label>Pilih Program Donasi :</label>
+            <select class="custom-select pro">
+            <?php foreach ($bencana as $bcn) : ?>
+              <option value="<?= $bcn['nama_program']; ?>">
+              <?= $bcn['nama_program']; ?>
+              </option>
+              <?php endforeach; ?>
+            </select>
+          </div>
+          <div class="form-group programs">
+            <label>Pilih bentuk donasi :</label>
             <select class="custom-select">
-              <option selected>Pilih Program</option>
+              <option selected>Pilih Donasi</option>
               <option value="1">Bencana Lombok</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
             </select>
           </div>
-          <div class="form-group jumlah">
-            <label>Jumlah Donasi :</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Masukan Jumlah Donasi">
-          </div>
-          <div class="form-group metode">
-            <label>Metode Pembayaran :</label>
+          <div class="form-group programs">
+            <label>Pilih Lokasi Posko :</label>
             <select class="custom-select">
-              <option selected>Transfer Bank</option>
+              <option selected>Pilih Posko</option>
+              <option value="1">Bencana Lombok</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
             </select>
           </div>
-          <div class="form-group">
-            <label for="bank">Pilih Bank :</label><br>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Bank Mandiri">
-              <label class="form-check-label" for="inlineRadio1"><img class="bank-img" src="assets/img/bank/mandiri.png" alt=""></label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Bank BCA">
-              <label class="form-check-label" for="inlineRadio2"><img class="bank-img" src="assets/img/bank/bca.png" alt=""></label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Bank BNI">
-              <label class="form-check-label" for="inlineRadio3"><img class="bank-img" src="assets/img/bank/bnisya.png" alt=""></label>
-            </div><br>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="Bank BRI">
-              <label class="form-check-label" for="inlineRadio4"><img class="bank-img" src="assets/img/bank/bri.png" alt=""></label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="Bank CIMB Niaga">
-              <label class="form-check-label" for="inlineRadio5"><img class="bank-img" src="assets/img/bank/cimb.png" alt=""></label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="Permata Bank">
-              <label class="form-check-label" for="inlineRadio6"><img class="bank-img" src="assets/img/bank/permata.png" alt=""></label>
-            </div>  
-          </div>
-          <button class="btn btn-default">Kirim</button>
+         
+          <button class="btn btn-kirim">Kirim</button>
         </div>
         <div class="col-6">
-
+        <div class="mapouter"><div class="gmap_canvas"><iframe width="519" height="360" id="gmap_canvas" src="https://maps.google.com/maps?q=uii&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de">pureblack.de</a></div><style>.mapouter{margin-left:80px;margin-top:40px;text-align:right;height:360px;width:519px;}.gmap_canvas {border-radius:8px;overflow:hidden;background:none!important;height:360px;width:519px;}</style></div>
         </div>
       </div>
     </div>

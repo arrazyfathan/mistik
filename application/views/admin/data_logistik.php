@@ -25,7 +25,7 @@
 									<td class="text-center"> <?= $kgt['nama_barang']; ?></td>
 									<td class="text-center"> <?= $kgt['jenis_barang']; ?></td>
 									<td class="text-center"> <?= $kgt['stok_kebutuhan']; ?></td>
-									<td class="text-center"><i class="material-icons">highlight_off</i></td>
+									<td class="text-center">Belum Terpenuhi</td>
 									<td class="text-center">
 									<a href="<?= base_url() ?>admin/hapusLogistik/<?= $kgt['id_logistik']; ?>" class="tombol-hapus"><i class="material-icons">done</i></a>
 									</td>
