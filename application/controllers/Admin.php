@@ -357,4 +357,10 @@ class Admin extends CI_Controller {
                 $this->template->load('admin/template', 'admin/detail_posko', $data);
         }
 
+        public function updateBarang($id)
+        {
+                $this->Barang_model->updateBarang($id);
+                redirect('Admin/profileDonasi');
+                
+        }
 }

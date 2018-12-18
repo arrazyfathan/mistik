@@ -31,7 +31,8 @@
 									<td class="text-center"> <?= $brg['nama_barang']; ?></td>
 									<td class="text-center"> <?= $brg['jumlah_barang']; ?></td>
 									<td class="text-center"> <?= $brg['status']; ?></td>
-									<a href="<?= base_url() ?>admin/editDonatur/<?= $dtr['id_donatur']; ?>" class="badge badge-warning">Edit </a>			
+									<td class="text-center"> <a href="<?= base_url() ?>admin/updateBarang/<?= $brg['id_barang']; ?>"><i class="material-icons">done</i></a></td>
+									<input type="text" hidden value="Telah Terkirim">			
 								</tr>
 							<?php endforeach; ?>
 							</tbody>

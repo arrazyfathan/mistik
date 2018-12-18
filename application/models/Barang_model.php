@@ -1,5 +1,4 @@
 <?php
-
 class Barang_model extends CI_model
 {
 
@@ -35,5 +34,17 @@ class Barang_model extends CI_model
         $this->db->or_like('jumlah_barang', $keyword);
         $this->db->or_like('status', $keyword);
         return $this->db->get('barang')->result_array();
+    }
+
+    public function updateBarang($id)
+    {
+        $data = [
+
+            "status" => "Telah Terkirim"
+
+        ];
+
+        $this->db->where('id_barang', $id);
+        $this->db->update('barang', $data);
     }
 }
