@@ -13,6 +13,11 @@ class Donatur_model extends CI_model
         return $this->db->get_where('donatur', ['id_donatur' => $id])->row_array();
     }
 
+    function auth_donatur($username, $nama_lengkap, $no_telepon, $alamat){
+        $query=$this->db->query("SELECT username ='$username', nama_lengkap ='$nama_lengkap', no_telepon ='$no_telepon', alamat='$alamat' FROM donatur");
+        return $query;
+    }
+
     public function tambahDataDonatur()
     {
         $data = [

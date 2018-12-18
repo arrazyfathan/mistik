@@ -9,7 +9,7 @@
 			<?php foreach ($bencana as $bcn) : ?>
 			<div class="col-sm-3 my-3">
 				<div class="card" style="width: 15rem;">
-					<img class="card-img-top" src="<?php echo $bcn['img_bencana'];?>">
+					<img class="card-img-top" src="<?php echo base_url('image/'. $bcn['img_bencana']);?>">
 					<div class="card-body">
 						<h5 class="card-title">
 							<?= $bcn['nama_program']; ?>

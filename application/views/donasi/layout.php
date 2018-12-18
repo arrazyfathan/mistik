@@ -41,7 +41,7 @@
                     <a class="nav-item nav-link " href="#program">Program</a>
                     <a class="nav-item nav-link " href="#contact">Contact</a> -->
 
-                    <a class="nav-item nav-link " href="#about">Hi, <?php echo $this->session->userdata('nama_lengkap');?></a>
+                    <!-- <a class="nav-item nav-link " href="#about">Hi, <?php echo $this->session->userdata('nama_lengkap');?></a> -->
 
                     <a class="nav-item nav-link " >Hi, <?php echo $this->session->userdata('username');?></a>
 
