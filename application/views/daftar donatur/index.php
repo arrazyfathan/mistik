@@ -28,7 +28,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-      <a class="navbar-brand " href="home"><img src="assets/img/logo-2.png" alt=" logo"></a>
+      <a class="navbar-brand " href="<?= base_url(); ?>"><img src="assets/img/logo-2.png" alt=" logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -36,7 +36,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link active " href="<?= base_url() ?>">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link " href="<?= base_url() ?>#program">Program</a>
+          <a class="nav-item nav-link " href="<?= base_url() ?>programcontroller">Program</a>
           <a class="nav-item nav-link " href="<?= base_url() ?>#contact">Contact</a>
           <a class="nav-item nav-link " href="<?= base_url() ?>#about">About</a>
           <a class="nav-item btn tombol " href="login_donatur">Login</a>

@@ -4,15 +4,15 @@
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="assets/img/logo.svg" alt=" logo"></a>
+      <a class="navbar-brand" href="<?= base_url(); ?>"><img src="assets/img/logo.svg" alt=" logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#home">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#program">Program</a>
+          <a class="nav-item nav-link active" href="<?= base_url(); ?>">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="<?= base_url(); ?>programcontroller">Program</a>
           <a class="nav-item nav-link" href="#contact">Contact</a>
           <a class="nav-item nav-link" href="#about"><span>About</span></a>
           <a class="nav-item btn tombol" href="<?= base_url();?>daftar_donatur">Sign Up</a>
@@ -139,7 +139,7 @@
         <p class="feature-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, error. Voluptatem amet
           ratione eos quibusdam sint molestiae. Ipsa quaerat quod commodi quis placeat iure, libero amet magnam error
           vero totam?</p>
-        <a href="" class="btn ayo-donasi">Ayo Donasi</a>
+        <a href="<?= base_url();?>donasicontroller" class="btn ayo-donasi">Ayo Donasi</a>
       </div>
     </div>
   </div>
@@ -241,13 +241,13 @@
           <h6 class="text-uppercase font-weight-bold">Akun</h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: white;">
           <p>
-            <a href="#!">Daftar Menjadi Donatur</a>
+            <a href="<?= base_url(); ?>daftar_donatur">Daftar Menjadi Donatur</a>
           </p>
           <p>
-            <a href="#!">Daftar Menjadi Relawan</a>
+            <a href="<?= base_url(); ?>daftar_relawan">Daftar Menjadi Relawan</a>
           </p>
           <p>
-            <a href="#!">Log In</a>
+            <a href="<?= base_url(); ?>login_donatur">Log In</a>
           </p>
           <p>
             <a href="#!">Help</a>

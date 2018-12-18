@@ -136,7 +136,7 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-close" data-dismiss="modal">Kembali</button>
-					<button type="submit" class="btn btn-kirim">Kirim</button>
+					<button type="submit" class="btn btn-kirim-modal">Kirim</button>
 				</div>
 			</div>
 		</div>

@@ -30,13 +30,13 @@
         <img class="logo-img" src="assets/img/logo.svg"> 
         <div class="tabel-login-dashboard">
           <form class="form-signin" action="<?php echo base_url().'logindb/auth'?>" method="post">
-            <div class="form-group">
-              <label for="username">Username</label>
-              <input type="text" class="form-control" id="username" name="username" placeholder="Masukan Username" required autofocus>
+            <div class="form-group min">
+              <label class="lb-admin" for="username">Username</label>
+              <input type="text" class="form-control min" id="username" name="username" placeholder="Masukan Username" required autofocus>
             </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+            <div class="form-group min">
+              <label class="lb-admin" for="password">Password</label>
+              <input type="password" class="form-control min" id="password" name="password" placeholder="Password" required>
               <small><a href="">Lupa password?</a></small>
             </div>
             <small style="color: red; float: left;" ><?php echo $this->session->flashdata('msg');?><br><br></small>

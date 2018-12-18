@@ -15,9 +15,9 @@
 								<tr>
 									<th class="text-center text-primary">Nama Donatur</th>
 									<th class="text-center text-primary">Program Donasi</th>
-									<th class="text-center text-primary">Bentuk Donasi</th>
-									<th class="text-center text-primary">Nama Barang</th>
-									<th class="text-center text-primary">Jumlah Barang</th>
+									<th class="text-center text-primary">Jumlah Donasi</th>
+									<th class="text-center text-primary">Metode Pembayaran</th>
+									<th class="text-center text-primary">Nama Bank</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -25,7 +25,7 @@
 								<tr>
 									<td class="text-center"> <?= $ung['nama_donatur']; ?></td>
 									<td class="text-center"> <?= $ung['program_donasi']; ?></td>
-									<td class="text-center"> <?= $ung['jumlah']; ?></td>
+									<td class="text-center">Rp. <?= $ung['jumlah']; ?>,00-</td>
 									<td class="text-center"> <?= $ung['metode_pembayaran']; ?></td>
 									<td class="text-center"> <?= $ung['nama_bank']; ?></td>		
 								</tr>
