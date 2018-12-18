@@ -13,6 +13,9 @@
         <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet" />
         <!--  Material Dashboard CSS    -->
         <link href="<?php echo base_url(); ?>assets/css/material-dashboard.css?v=1.2.0" rel="stylesheet" />
+
+         <!-- Chart.js -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
         <!--  CSS for Demo Purpose, don't include it in your project     -->
 
         <!--     Fonts and icons     -->
