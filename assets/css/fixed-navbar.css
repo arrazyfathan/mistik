@@ -135,7 +135,18 @@
 
 }
 
-.login-admin img {
+.link {
+	padding: 50px;
+	background-color: transparent;
+	position: fixed;
+	margin-left: 140px;
+	margin-top: 20px;
+	width: 200px;
+	z-index: 99;
+}
+
+
+.logo-img {
 	margin: auto;
 	margin-top: 30px;
 	width: 150px;

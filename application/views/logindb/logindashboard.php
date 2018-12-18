@@ -26,7 +26,8 @@
   <div class="container-fluid admin">
     <div class="d-flex justify-content-center">
       <div class="card login-admin">
-        <img src="assets/img/logo.svg"> 
+      <a class="link" href="<?= base_url(); ?>"></a>
+        <img class="logo-img" src="assets/img/logo.svg"> 
         <div class="tabel-login-dashboard">
           <form class="form-signin" action="<?php echo base_url().'logindb/auth'?>" method="post">
             <div class="form-group">
