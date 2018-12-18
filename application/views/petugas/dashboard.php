@@ -68,7 +68,7 @@
 					</div>
 					<div class="card-content">
 						<p class="category"  style="font-weight:500;">Total Donasi</p>
-						<h3 class="title">Rp. 1000</h3>
+						<h3 class="title">Rp. <?php echo $uang; ?></h3>
 					</div>
 					<div class="card-footer">
 						<div class="stats">

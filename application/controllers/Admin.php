@@ -3,6 +3,7 @@ class Admin extends CI_Controller {
         
         function __construct(){
                 parent:: __construct();
+                $this->load->model('Uang_model');
                 $this->load->model('Bencana_model');
                 $this->load->model('Donatur_model');
                 $this->load->model('Petugas_model');
@@ -20,6 +21,7 @@ class Admin extends CI_Controller {
                 $data['posko'] = $this->Posko_model->getTotalPosko();
                 $data['program'] = $this->Bencana_model->getTotalProgram();
                 $data['pengungsi'] = $this->Bencana_model->getTotalPengungsi();
+                $data['uang'] = $this->Uang_model->getTotalDonasi();
                 $data['grafik'] = $this->Bencana_model->getGrafikBencana();
                 $this->template->load('admin/template', 'admin/dashboard', $data);
         }

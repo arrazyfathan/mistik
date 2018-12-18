@@ -8,6 +8,13 @@ class Uang_model extends CI_model
         return $query;
     }
 
+    public function getTotalDonasi()
+    {
+        $this->db->select('SUM(jumlah) as total');
+        $this->db->from('uang');
+        return $this->db->get()->row()->total; 
+    }
+
     public function getUangById($id)
     {
         return $this->db->get_where('uang', ['id_uang' => $id])->row_array();
