@@ -59,6 +59,12 @@
                             </a>
                         </li>
                         <li>
+                            <a href="<?php echo base_url() . 'admin/profileDonasi' ?>">
+                                <i class="material-icons">attach_money</i>
+                                <p>Data Donasi</p>
+                            </a>
+                        </li>
+                        <li>
                             <a href="<?php echo base_url() . 'admin/profileLogistik' ?>">
                                 <i class="material-icons">assignment_late</i>
                                 <p>Data Kelogistik</p>

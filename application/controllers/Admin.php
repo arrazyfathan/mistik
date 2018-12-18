@@ -7,6 +7,7 @@ class Admin extends CI_Controller {
                 $this->load->model('Bencana_model');
                 $this->load->model('Donatur_model');
                 $this->load->model('Petugas_model');
+                $this->load->model('Barang_model');
                 $this->load->model('Kelogistik_model');
                 $this->load->model('Posko_model');
                 $this->load->library('form_validation');
@@ -32,6 +33,14 @@ class Admin extends CI_Controller {
                         $data['bencana'] = $this->Bencana_model->cariDataBencana();
                 }
                 $this->template->load('admin/template', 'admin/data_program', $data);
+        }
+
+        function profileDonasi() {
+                $data['barang'] = $this->Barang_model->getAllBarang();
+                if($this->input->post('keyword')){
+                        $data['barang'] = $this->Barang_model->cariDataBarang();
+                }
+                $this->template->load('admin/template', 'admin/data_barang', $data);
         }
 
         function profileLogistik() {
@@ -152,6 +161,8 @@ class Admin extends CI_Controller {
         }
         // END EDIT DATA BENCANA
         // ----------------------------
+
+        
         // EDIT DATA PETUGAS
         public function editPetugas($id)
         {

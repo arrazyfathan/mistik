@@ -5,7 +5,7 @@ class Donasi_barang extends CI_Controller {
         parent:: __construct();
         $this->load->model('Barang_model');
         $this->load->model('Bencana_model');
-        // $this->load->library('form_validation');
+        $this->load->library('form_validation');
         
         //Validasi jika user belum login
         if($this->session->userdata('logedin') !=TRUE){
@@ -16,33 +16,31 @@ class Donasi_barang extends CI_Controller {
 
     public function index(){
         $data['bencana'] = $this->Bencana_model->getAllBencana();
-        $this->load->view('donasi/barang', $data);
-        // $config = array(
-        //                 array(
-        //                         'field' => 'nama-barang',
-        //                         'label' => 'name',
-        //                         'rules' => 'required'
-        //                 ),
-        //                 array(
-        //                         'field' => 'jumlah-barang',
-        //                         'label' => 'count',
-        //                         'rules' => 'required'
-        //                 ),
-        //         );
+        $config = array(
+                        array(
+                                'field' => 'nama-barang',
+                                'label' => 'name',
+                                'rules' => 'required'
+                        ),
+                        array(
+                                'field' => 'jumlah-barang',
+                                'label' => 'count',
+                                'rules' => 'required'
+                        ),
+                );
 
-        //     $this->form_validation->set_rules($config);
+            $this->form_validation->set_rules($config);
 
-        //         if ($this->form_validation->run() == false) {
+                if ($this->form_validation->run() == false) {
 
-        //                 $this->load->view('donasi/barang', $data);
+                        $this->load->view('donasi/barang', $data);
                         
-        //             } else {
+                    } else {
                         
-                        // $this->Barang_model->tambahDataBarang();
-                        // $this->session->set_flashdata('flash', 'Berhasil');
-                        // $this->load->view('donasi/barang', $data);
-                        // $this->load->view('donasi/modal');
-                // }
+                        $this->Barang_model->tambahDataBarang();
+                        $this->session->set_flashdata('flash', 'Berhasil');
+                        redirect('Donasi_barang');
+                }
         
     }
 
