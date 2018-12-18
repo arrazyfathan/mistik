@@ -13,7 +13,6 @@ class Daftar_relawan extends CI_Controller
     public function index()
     {
         $data['judul'] = 'Mistik';
-        $data['petugas'] = $this->Petugas_model->getAllPetugas();
 
         $config = array(
                         array(
@@ -79,7 +78,7 @@ class Daftar_relawan extends CI_Controller
                         $this->load->view('daftar relawan/index');  
                 } else {
                         $this->Petugas_model->tambahDataPetugas();
-                        $this->session->set_flashdata('flash', 'Disimpan');
+                        $this->session->set_flashdata('flash', 'Terdaftar');
                         redirect('daftar_relawan');
                 }
     }

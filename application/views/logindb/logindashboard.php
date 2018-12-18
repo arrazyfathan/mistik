@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="assets/img/favicon.ico">
+  <link rel="shortcut icon" href="assets/img/mistik.ico">
 
   <title>Login Dashboard</title>
 </head>
@@ -26,7 +26,7 @@
   <div class="container-fluid admin">
     <div class="d-flex justify-content-center">
       <div class="card login-admin">
-        <img src="assets/img/logo.svg">
+        <img src="assets/img/logo.svg"> 
         <div class="tabel-login-dashboard">
           <form class="form-signin" action="<?php echo base_url().'logindb/auth'?>" method="post">
             <div class="form-group">

@@ -19,7 +19,9 @@
         crossorigin="anonymous">
 
     <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/mistik.ico">
     <link rel="shortcut icon" href="<?php echo base_url('assets/img/favicon.ico')?>">
+
 
     <title>Donasi</title>
 </head>
@@ -35,10 +37,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
-             <!--        <a class="nav-item nav-link active " href="#home">Home <span class="sr-only">(current)</span></a>
+                    <!--<a class="nav-item nav-link active " href="#home">Home <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link " href="#program">Program</a>
                     <a class="nav-item nav-link " href="#contact">Contact</a> -->
+
+                    <!-- <a class="nav-item nav-link " href="#about">Hi, <?php echo $this->session->userdata('nama_lengkap');?></a> -->
+
                     <a class="nav-item nav-link " >Hi, <?php echo $this->session->userdata('username');?></a>
+
                     <a class="nav-item btn tombol " href="<?php echo base_url().'login_donatur/logout'?>">Logout</a>
                 </div>
             </div>
