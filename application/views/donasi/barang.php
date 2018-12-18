@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
 
+    
+
   <!-- My CSS -->
   <link rel="stylesheet" href="<?= base_url('assets/css/donasi.css')?>">
 
@@ -49,7 +51,7 @@
   <div class="container-fluid barang">
     <h3>DONASI BARANG</h3>
     <div class="container">
-      <div class="row">
+      <div class="row kiri">
         <div class="col-6 form">
           <div class="form-group" hidden>
             <label>Ambil data user yang login</label>
@@ -57,7 +59,7 @@
           </div>
           <div class="form-group programs atas">
             <label>Pilih Program Donasi :</label>
-            <select class="custom-select pro">
+            <select class="custom-select pro" name="nama-program">
             <?php foreach ($bencana as $bcn) : ?>
               <option value="<?= $bcn['nama_program']; ?>">
               <?= $bcn['nama_program']; ?>
@@ -65,33 +67,70 @@
               <?php endforeach; ?>
             </select>
           </div>
-          <div class="form-group programs">
-            <label>Pilih bentuk donasi :</label>
-            <select class="custom-select">
+          <div class="form-group programs bentuk">
+            <label>Bentuk donasi :</label>
+            <select class="custom-select" name="bentuk-donasi">
               <option selected>Pilih Donasi</option>
-              <option value="1">Bencana Lombok</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="Sandang">Sandang</option>
+              <option value="Pangan">Pangan</option>
             </select>
           </div>
-          <div class="form-group programs">
-            <label>Pilih Lokasi Posko :</label>
-            <select class="custom-select">
-              <option selected>Pilih Posko</option>
-              <option value="1">Bencana Lombok</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
+          <div class="form-group sandang">
+							<label>Nama Barang :</label>
+							<input type="text" class="form-control" id="exampleFormControlInput1" 
+							name='nama-barang' placeholder="Masukan Nama Barang">
+						</div>
+          <div class="form-group" hidden>
+							<label>Status</label>
+							<input type="text" class="form-control" id="exampleFormControlInput1" value="Belum Diterima"
+							name='status'>
+            </div>
+            <div class="form-group sandang">
+							<label>Jumlah Barang :</label>
+							<input type="text" class="form-control" id="exampleFormControlInput1" 
+							name='nama-barang' placeholder="Masukan Nama Barang">
+						</div>
          
-          <button class="btn btn-kirim">Kirim</button>
+          <button class="btn btn-kirim" data-toggle="modal" data-target=".bd-example-modal-lg">Kirim</button>
         </div>
         <div class="col-6">
-        <div class="mapouter"><div class="gmap_canvas"><iframe width="519" height="360" id="gmap_canvas" src="https://maps.google.com/maps?q=uii&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de">pureblack.de</a></div><style>.mapouter{margin-left:80px;margin-top:40px;text-align:right;height:360px;width:519px;}.gmap_canvas {border-radius:8px;overflow:hidden;background:none!important;height:360px;width:519px;}</style></div>
+        <!-- <div class="mapouter"><div class="gmap_canvas"><iframe width="519" height="360" id="gmap_canvas" src="https://maps.google.com/maps?q=uii&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de">pureblack.de</a></div><style>.mapouter{margin-left:80px;margin-top:40px;text-align:right;height:360px;width:519px;posisition:fixed;}.gmap_canvas {border-radius:8px;overflow:hidden;background:none!important;height:360px;width:519px;}</style></div> -->
         </div>
       </div>
     </div>
   </div>
+
+
+<!-- Large modal -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Info Donasi</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">   
+        <h4>Ketentuan Donasi Barang</h4><br>
+        <ul>
+          <li>Silahkan kirimkan donasi anda ke alamat berikut ini :<br>BPBD Kota Yogyakarta
+ Jl. Ipda Tut Harsono No.8, Muja Muju, <br>Umbulharjo, Kota Yogyakarta, Daerah Istimewa <br>Yogyakarta 55165</li>
+          <li>Barang dapat dikirimkan melalui JNE,POS Indonesia, J&T dan penyedia jasa lainnya. </li>
+          <li>Barang akan dikirimkan langsung melalui BDPB ke lokasi bencana</li>
+          <li>Terima Kasih sudah berdonasi, bantuan anda akan sangat bermanfaat.</li>
+        </ul>
+
+        <img class="modal-img" src="assets/img/love.png" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-close" data-dismiss="modal">Kembali</button>
+        <button type="button" class="btn btn-kirim">Kirim</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
 
 
   <!-- Optional JavaScript -->
