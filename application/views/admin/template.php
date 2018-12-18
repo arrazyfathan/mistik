@@ -59,9 +59,15 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url() . 'admin/profileDonasi' ?>">
+                            <a href="<?php echo base_url() . 'admin/profileDonasiUang' ?>">
                                 <i class="material-icons">attach_money</i>
-                                <p>Data Donasi</p>
+                                <p>Data Donasi Uang</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url() . 'admin/profileDonasiBarang' ?>">
+                                <i class="material-icons">markunread_mailbox</i>
+                                <p>Data Donasi Barang</p>
                             </a>
                         </li>
                         <li>

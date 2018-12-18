@@ -35,8 +35,16 @@ class Admin extends CI_Controller {
                 }
                 $this->template->load('admin/template', 'admin/data_program', $data);
         }
+        // EDIT SINI
+        function profileDonasiUang() {
+                $data['uang'] = $this->Uang_model->getAllUang();
+                if($this->input->post('keyword')){
+                        $data['uang'] = $this->Uang_model->cariDataUang();
+                }
+                $this->template->load('admin/template', 'admin/data_uang', $data);
+        }
 
-        function profileDonasi() {
+        function profileDonasiBarang() {
                 $data['barang'] = $this->Barang_model->getAllBarang();
                 if($this->input->post('keyword')){
                         $data['barang'] = $this->Barang_model->cariDataBarang();

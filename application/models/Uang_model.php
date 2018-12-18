@@ -8,6 +8,17 @@ class Uang_model extends CI_model
         return $query;
     }
 
+    public function cariDataUang()
+    {
+        $keyword = $this->input->post('keyword', true);
+        $this->db->like('nama_donatur', $keyword);
+        $this->db->or_like('program_donasi', $keyword);
+        $this->db->or_like('jumlah', $keyword);
+        $this->db->or_like('metode_pembayaran', $keyword);
+        $this->db->or_like('nama_bank', $keyword);
+        return $this->db->get('uang')->result_array();
+    }
+
     public function getTotalDonasi()
     {
         $this->db->select('SUM(jumlah) as total');
