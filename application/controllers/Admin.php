@@ -304,6 +304,11 @@ class Admin extends CI_Controller {
                                 'rules' => 'required|numeric'
                         ),
                         array(
+                                'field' => 'img',
+                                'label' => 'img',
+                                'rules' => 'callback_validate_image'
+                        ),
+                        array(
                                 'field' => 'deskripsi',
                                 'label' => 'Description',
                                 'rules' => 'required'

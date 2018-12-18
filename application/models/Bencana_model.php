@@ -64,6 +64,12 @@ class Bencana_model extends CI_model
 
         ];
 
+        // $file_tmp = $_FILES['img']['tmp_name'];
+        // $file_type = $_FILES['img']['type'];
+        // $file_error = $_FILES['img']['error'];
+        // $file_size = $_FILES['img']['size'];
+        // $file_path = "assets/img/programs".$_POST['id_bencana'].".jpg";
+
         $this->db->where('id_bencana');
         $this->db->insert('bencana', $data);
     }

@@ -150,8 +150,6 @@
 						<tr>
 							<td><span style="font-size:18px; font-weight:600;">Info Donatur</span> <br>
 								Nama : <?php echo $this->session->userdata('ses_nama');?><br>
-								No. Telepon : <?php //echo $this->session->userdata('ses_notelp');?><br>
-								Alamat : <?php //echo $this->session->userdata('ses_alamat');?><br>
 
 							</td>
 						</tr>

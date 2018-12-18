@@ -5,7 +5,6 @@
         function __construct(){
                 parent:: __construct();
                 $this->load->model('Bencana_model');
-                $this->load->library('image_lib');
         }
 
         public function index() 

@@ -13,10 +13,10 @@ class Uang_model extends CI_model
         return $this->db->get_where('uang', ['id_uang' => $id])->row_array();
     }
 
-    function auth_uang($program_donasi, $jumlah, $inlineRadioOptions){
-        $query=$this->db->query("SELECT * FROM uang WHERE program_donasi = '$program_donasi', jumlah = '$jumlah', nama_bank = '$inlineRadioOptions' ");
-        return $query;
-    }
+    // function auth_uang($program_donasi, $jumlah, $inlineRadioOptions){
+    //     $query=$this->db->query("SELECT * FROM uang WHERE program_donasi = '$program_donasi', jumlah = '$jumlah', nama_bank = '$inlineRadioOptions' ");
+    //     return $query;
+    // }
 
     public function tambahDataUang()
     {
@@ -33,15 +33,15 @@ class Uang_model extends CI_model
         $this->db->insert('uang', $data);
     }
 
-    public function joinUang($id)
-    {   
-        $this->db->get_where('uang', ['id_uang' => $id]);
-        $this->db->get_where('donatur', ['id_donatur' => $id]);
-        $this->db->select('*');
-        $this->db->from('uang');
-        $this->db->join('donatur', 'donatur.id_donatur = uang.id_uang');
-        $query = $this->db->get()->result_array();
-        return $query;
+    // public function joinUang($id)
+    // {   
+    //     $this->db->get_where('uang', ['id_uang' => $id]);
+    //     $this->db->get_where('donatur', ['id_donatur' => $id]);
+    //     $this->db->select('*');
+    //     $this->db->from('uang');
+    //     $this->db->join('donatur', 'donatur.id_donatur = uang.id_uang');
+    //     $query = $this->db->get()->result_array();
+    //     return $query;
 
-    }
+    // }
 }
