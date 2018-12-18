@@ -47,6 +47,7 @@
 	</nav>
 	<!-- End Navbar -->
 	<form action="" method="post">
+		<div class="uang">
 		<div class="container-fluid uang">
 			<h3>DONASI UANG</h3>
 			<div class="container">
@@ -115,7 +116,8 @@
 					</div>
 	</form>
 	<div class="col-6">
-		<img class="img-donation" src="assets/img/donat_uang.png" alt="donation">
+		<img class="img-donation" src="assets/img/uang.png" alt="donation">
+	</div>
 	</div>
 	</div>
 	</div>
@@ -131,12 +133,12 @@
 	 crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 	 crossorigin="anonymous"></script>
-	<!-- <script>
+	<script>
     $('html, body').css({
-      overflow: 'hidden',
+      overflow: '',
       height: '100%'
     });
-  </script> -->
+  </script>
 </body>
 
 </html>

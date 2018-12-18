@@ -95,6 +95,8 @@
         </div>
         <div class="col-6">
         <!-- <div class="mapouter"><div class="gmap_canvas"><iframe width="519" height="360" id="gmap_canvas" src="https://maps.google.com/maps?q=uii&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de">pureblack.de</a></div><style>.mapouter{margin-left:80px;margin-top:40px;text-align:right;height:360px;width:519px;posisition:fixed;}.gmap_canvas {border-radius:8px;overflow:hidden;background:none!important;height:360px;width:519px;}</style></div> -->
+          <img class="bc-img" src="assets/img/pinggir.png" alt="">
+          <img class="bb-img" src="assets/img/barang.png" alt="">
         </div>
       </div>
     </div>
@@ -125,7 +127,6 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-close" data-dismiss="modal">Kembali</button>
-        <button type="button" class="btn btn-kirim">Kirim</button>
       </div>
       
     </div>
@@ -141,12 +142,12 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-  <!-- <script>
+    <script>
     $('html, body').css({
       overflow: 'hidden',
       height: '100%'
     });
-  </script> -->
+  </script>
 </body>
 
 </html>

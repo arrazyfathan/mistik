@@ -16,6 +16,8 @@
 	margin-left: 50px;
 }
 
+
+
 .tombol {
 	border-radius: 5px;
 	width: 100px;
@@ -102,6 +104,7 @@ a {
 	padding: 50px;
 }
 
+
 a:hover {
 	text-decoration: none;
 	color: white;
@@ -179,9 +182,9 @@ label {
 }
 
 .img-donation {
-	margin: auto;
-	width: 500px;
-	margin-top: 70px;
+	margin-left: 65px;
+	width: 600px;
+	margin-top: 60px;
 }
 
 .atas {
@@ -219,4 +222,19 @@ ul li {
 	margin-left: 220px;
 	margin-top: 20px;
 
+}
+
+.bc-img {
+	width: 120%;
+	background-size: cover;
+	margin-left: 18px;
+}
+
+
+
+.bb-img {
+	width: 600px;
+	z-index: 99;
+	margin-top: -550px;
+	margin-left: 20px;
 }
