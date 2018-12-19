@@ -368,7 +368,7 @@ class Admin extends CI_Controller {
         public function updateBarang($id)
         {
                 $this->Barang_model->updateBarang($id);
-                redirect('Admin/profileDonasi');
+                redirect('admin/profileDonasiBarang');
                 
         }
 }
