@@ -77,6 +77,10 @@
 	font-size: 18px;
 }
 
+.btn-daftar:hover {
+	background-color: rgb(60, 134, 132);
+}
+
 .relawan {
 	margin: auto;
 	margin-top: -120px;
@@ -111,4 +115,65 @@
 .subtitle {
 	font-weight: 600;
 	margin-bottom: 30px;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+	.navbar img {
+		width: 100px;
+	}
+
+	.navbar-nav .nav-link {
+		margin-left: 10px;
+	}
+
+	.tombol {
+		margin-left: 10px;
+	}
+
+	.card {
+		margin: auto;
+		margin-top: -120px;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.card-title {
+		text-align: center;
+		color: #4c4c4c;
+		margin-bottom: 30px;
+		font-size: 20px;
+		text-transform: uppercase;
+
+	}
+
+	.form-group {
+		margin: auto;
+		margin-bottom: 20px;
+		width: 100%;
+		font-size: 15px;
+	}
+
+	.form-control {
+		width: 100%;
+		font-size: 14px;
+	}
+
+	.subtitle {
+		font-weight: 600;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	.custom-select {
+		width: 100%;
+	}
+
+	.btn-daftar {
+		width: 100%;
+		margin-left: 0px;
+		margin-top: 1px;
+	}
+
+
 }

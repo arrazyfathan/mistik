@@ -158,6 +158,15 @@ label {
 
 }
 
+.btn-kirim-modal {
+	background-color: #E38813;
+	width: 130px;
+	margin-left: -70px;
+	margin-top: 10px;
+	color: #fff;
+
+}
+
 .btn-close {
 	background-color: rgb(248, 74, 74);
 	width: 100px;
@@ -177,6 +186,11 @@ label {
 }
 
 .btn-kirim:hover {
+	background-color: rgb(156, 92, 8);
+
+}
+
+.btn-kirim-modal:hover {
 	background-color: rgb(156, 92, 8);
 
 }
@@ -237,4 +251,81 @@ ul li {
 	z-index: 99;
 	margin-top: -550px;
 	margin-left: 20px;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+	.card {
+		margin-bottom: 60px;
+	}
+
+	.img-donation {
+		width: 0px;
+	}
+
+	.uang h3 {
+		margin-bottom: 40px;
+	}
+
+	.uang label {
+		margin-top: 10px;
+	}
+
+	.form-group {
+		margin-left: 20px;
+	}
+
+	.jumlah input {
+		width: 300px;
+
+	}
+
+	.form-check {
+		display: block;
+
+	}
+
+	.btn-kirim {
+		margin-left: 20px;
+		width: 100%;
+	}
+
+	.modal-img {
+		margin: auto;
+		width: 300px;
+
+		margin-left: 30px;
+	}
+
+	.bc-img {
+		width: 0px;
+	}
+
+	.bb-img {
+		width: 0px;
+	}
+
+	.atas select {
+		width: 300px;
+	}
+
+	.bentuk select {
+		width: 300px;
+	}
+
+	.sandang input {
+		width: 300px;
+	}
+
+	.btn-kirim {
+		margin-left: 20px;
+	}
+
+	.btn-kirim-modal {
+		margin-right: 60px;
+	}
+
+
+
+
 }

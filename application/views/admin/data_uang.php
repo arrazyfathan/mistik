@@ -25,7 +25,7 @@
 								<tr>
 									<td class="text-center"> <?= $ung['nama_donatur']; ?></td>
 									<td class="text-center"> <?= $ung['program_donasi']; ?></td>
-									<td class="text-center"> <?= $ung['jumlah']; ?></td>
+									<td class="text-center">Rp. <?= $ung['jumlah']; ?>,00-</td>
 									<td class="text-center"> <?= $ung['metode_pembayaran']; ?></td>
 									<td class="text-center"> <?= $ung['nama_bank']; ?></td>		
 								</tr>

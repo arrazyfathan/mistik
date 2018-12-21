@@ -28,7 +28,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-      <a class="navbar-brand " href="home"><img src="assets/img/logo-2.png" alt=" logo"></a>
+      <a class="navbar-brand " href="<?= base_url(); ?>"><img src="assets/img/logo-2.png" alt=" logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -56,7 +56,7 @@
 				<p class="title">Daftar Akun Relawan</p>
 				<form action="" method="post">
 					<div class="row">
-						<div class="col-6">
+						<div class="col-lg">
 							<div class="form-group">
 								<p class="subtitle">Informasi Pribadi</p>
 								<label for="namadepan">Nama Depan</label>
@@ -135,7 +135,7 @@
 								<?php endif ?>
 							</div>
 						</div>
-						<div class="col-6">
+						<div class="col-lg">
 							<div class="form-group">
 								<p class="subtitle">Informasi Akun</p>
 								<label for="username">Username</label>

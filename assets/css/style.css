@@ -353,6 +353,13 @@
 
 }
 
+.btn-login:hover {
+	background-color: rgb(61, 138, 135);
+	cursor: pointer;
+
+
+}
+
 .form-group small a {
 	float: right;
 	margin-top: 10px;
@@ -515,9 +522,9 @@
 		z-index: 1;
 	}
 
-	.navbar img {
+	/* .navbar img {
 		margin-left: 150px;
-	}
+	} */
 
 	.jumbotron .display-4 {
 		text-align: center;
@@ -535,8 +542,8 @@
 	}
 
 	.tombol1 {
-		margin-left: 35px;
-		width: 160px;
+		margin-left: 0px;
+		width: 100%;
 
 	}
 
@@ -595,8 +602,30 @@
 
 	.box-login {
 		margin: auto;
-		margin-top: 140px;
-		margin-right: 16px;
+		margin-top: 100px;
+		margin-right: 30px;
+		width: 350px;
+		height: 500px;
+	}
+
+	.btn-login {
+		margin: auto;
+		margin-top: 80px;
+		margin-left: 21px;
+		width: 88%;
+		color: white;
+		background-color: #50B1AE;
+		font-size: 16px;
+
+	}
+
+	.buat-akun {
+		font-size: 14px;
+	}
+
+	.site-logo img {
+		width: 120px;
+		margin-left: 100px;
 	}
 
 

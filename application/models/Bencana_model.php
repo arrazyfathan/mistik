@@ -2,6 +2,7 @@
 
 class Bencana_model extends CI_model
 {
+    public $img_bencana = "default.jpg";
 
     public function getAllBencana()
     {

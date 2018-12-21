@@ -11,7 +11,7 @@
         {
             $data['judul'] = 'Program';
             $data['bencana'] = $this->Bencana_model->getAllBencana();
-            $this->load->view('template/header', $data);
+            
             $this->load->view('programs/programs', $data);
             $this->load->view('template/footer');
         }
