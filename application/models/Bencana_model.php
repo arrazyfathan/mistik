@@ -53,27 +53,6 @@ class Bencana_model extends CI_model
         $this->db->update('bencana', $data);
     }
 
-    public function tambahDataBencana()
-    {
-        $data = [
-
-            "nama_program" => $this->input->post('nama-program', true),
-            "jenis_bencana" => $this->input->post('jenis-bencana', true),
-            "jumlah_pengungsi" => $this->input->post('jumlah-pengungsi', true),
-            "deskripsi" => $this->input->post('deskripsi', true)
-
-        ];
-
-        // $file_tmp = $_FILES['img']['tmp_name'];
-        // $file_type = $_FILES['img']['type'];
-        // $file_error = $_FILES['img']['error'];
-        // $file_size = $_FILES['img']['size'];
-        // $file_path = "assets/img/programs".$_POST['id_bencana'].".jpg";
-
-        $this->db->where('id_bencana');
-        $this->db->insert('bencana', $data);
-    }
-
     public function cariDataBencana()
     {
         $keyword = $this->input->post('keyword', true);
@@ -82,6 +61,44 @@ class Bencana_model extends CI_model
         $this->db->or_like('jumlah_pengungsi', $keyword);
         $this->db->or_like('deskripsi', $keyword);
         return $this->db->get('bencana')->result_array();
+    }
+
+// ---------------------------------------------------------------
+
+    public function view(){
+		return $this->db->get('bencana')->result();
+	}
+
+    // Fungsi untuk melakukan proses upload file
+    public function upload() {
+    $config['upload_path'] = './assets/img/programs/';
+    $config['allowed_types'] = 'jpg|png|jpeg';
+    $config['max_size']  = '2048';
+    $config['remove_space'] = TRUE;
+
+    $this->load->library('upload', $config); // Load konfigurasi uploadnya
+    if($this->upload->do_upload('input_gambar')){ // Lakukan upload dan Cek jika proses upload berhasil
+    // Jika berhasil :
+    $return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');
+    return $return;
+    }else{
+    // Jika gagal :
+    $return = array('result' => 'failed', 'file' => '', 'error' => $this->upload->display_errors());
+    return $return;
+        }
+    }
+
+    // Fungsi untuk menyimpan data ke database
+    public function tambahDataBencana($upload) {
+    $data = array(
+        "nama_program" => $this->input->post('nama-program', true),
+        "jenis_bencana" => $this->input->post('jenis-bencana', true),
+        "jumlah_pengungsi" => $this->input->post('jumlah-pengungsi', true),
+        "deskripsi" => $this->input->post('deskripsi', true),
+        'img_bencana' => $upload['file']['file_name']
+    );
+    
+    $this->db->insert('bencana', $data);
     }
 
 }

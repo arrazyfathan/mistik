@@ -1,3 +1,4 @@
+
 <section id="program">
 	<div class="container-fluid programs">
 		<div class="row">
@@ -9,15 +10,15 @@
 			<?php foreach ($bencana as $bcn) : ?>
 			<div class="col-sm-3 my-3">
 				<div class="card" style="width: 15rem;">
-					<img class="card-img-top" src="<?php echo base_url('image/'. $bcn['img_bencana']);?>">
+					<img class="card-img-top" src="<?= base_url("assets/img/programs/".$bcn['img_bencana'])?>" >
 					<div class="card-body">
 						<h5 class="card-title">
 							<?= $bcn['nama_program']; ?>
 						</h5>
-						<p class="card-text">
+						<p class="card-text" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
 							<?= $bcn['deskripsi']; ?>
 						</p>
-						<a href="<?= base_url();?>content/contentcontroller" class="btn card-button">Donasi Sekarang</a>
+						<a href="<?= base_url() ?>programcontroller/detailprogram/<?= $bcn['id_bencana']; ?>" class="btn card-button">Donasi Sekarang</a>
 					</div>
 				</div>
 			</div>

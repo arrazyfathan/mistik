@@ -58,6 +58,7 @@
 
             function tambahKelogistik(){
 
+                $data['bencana'] = $this->Bencana_model->getAllBencana();
                 $config = array(
                         array(
                                 'field' => 'nama-barang',
@@ -75,7 +76,7 @@
                 
                 if ($this->form_validation->run() == false) {
                         
-                        $this->template->load('petugas/template', 'petugas/buat_kelogistik');
+                        $this->template->load('petugas/template', 'petugas/buat_kelogistik', $data);
                         
                 } else {
                         $this->Kelogistik_model->tambahDataKelogistik();

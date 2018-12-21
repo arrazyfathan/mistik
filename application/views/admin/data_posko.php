@@ -24,9 +24,9 @@
 								<tr>
 									<td class="text-center"> <?= $psk['nama_posko']; ?></td>
 									<td class="text-center">
-									<a href="<?= base_url() ?>admin/detailPosko/<?= $psk['id_posko']; ?>" class="badge badge-warning">Detail </a>
-									<a href="<?= base_url() ?>admin/editPosko/<?= $psk['id_posko']; ?>" class="badge badge-warning">Edit </a>
-									<a href="<?= base_url() ?>admin/hapusPosko/<?= $psk['id_posko']; ?>" class="badge badge-danger tombol-hapus">Hapus</a>
+									<a href="<?= base_url() ?>admin/detailPosko/<?= $psk['id_posko']; ?>" ><i class="material-icons" title="detail">visibility</i></a>
+									<a href="<?= base_url() ?>admin/editPosko/<?= $psk['id_posko']; ?>" ><i class="material-icons" title="edit">create</i></a>
+									<a href="<?= base_url() ?>admin/hapusPosko/<?= $psk['id_posko']; ?>" class="tombol-hapus"><i class="material-icons" title="hapus">delete_sweep</i></a>
 									</td>
 								</tr>
 							<?php endforeach; ?>

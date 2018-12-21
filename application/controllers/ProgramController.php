@@ -15,4 +15,11 @@
             $this->load->view('programs/programs', $data);
             $this->load->view('template/footer');
         }
+
+        public function detailProgram($id)
+        {   
+            $data['judul'] = 'Detail Program';
+            $data['bencana'] = $this->Bencana_model->getBencanaById($id);
+            $this->load->view('programs/content', $data);
+        }
     }

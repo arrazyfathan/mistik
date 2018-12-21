@@ -281,6 +281,13 @@ class Admin extends CI_Controller {
                 }
         }
         // END EDIT DATA POSKO
+        // UPDATE DATA
+        public function updateBarang($id)
+        {
+                $this->Barang_model->updateBarang($id);
+                redirect('Admin/profileDonasi');
+                
+        }
         // END EDIT DATA
 
         // TAMBAH DATA
@@ -313,7 +320,26 @@ class Admin extends CI_Controller {
 
         function buatProgram() {
 
+                // $data = array();
+		
+		// if($this->input->post('submit')){ 
+		
+		// 	$upload = $this->Bencana_model->upload();
+			
+		// 	if($upload['result'] == "success"){ 
+				
+		// 		$this->Bencana_model->save($upload);
+				
+		// 		redirect('buatProgram'); 
+		// 	}else{ 
+		// 		$data['message'] = $upload['error'];
+		// 	}
+		// }
+		
+                // $this->template->load('admin/template', 'admin/buat_program', $data);
                 
+                // --------------------------------------------------------------------------
+
                 $config = array(
                         array(
                                 'field' => 'nama-program',
@@ -324,11 +350,6 @@ class Admin extends CI_Controller {
                                 'field' => 'jumlah-pengungsi',
                                 'label' => 'refuges',
                                 'rules' => 'required|numeric'
-                        ),
-                        array(
-                                'field' => 'img',
-                                'label' => 'img',
-                                'rules' => 'callback_validate_image'
                         ),
                         array(
                                 'field' => 'deskripsi',
@@ -344,9 +365,10 @@ class Admin extends CI_Controller {
                         $this->template->load('admin/template', 'admin/buat_program');
                         
                 } else {
-                        $this->Bencana_model->tambahDataBencana();
+                        $upload = $this->Bencana_model->upload();
+                        $this->Bencana_model->tambahDataBencana($upload);
                         $this->session->set_flashdata('flash', 'Ditambah');
-                        redirect('admin/buatProgram');
+                        redirect('admin/buatProgram');              
                 }
         }
 
@@ -365,10 +387,5 @@ class Admin extends CI_Controller {
                 $this->template->load('admin/template', 'admin/detail_posko', $data);
         }
 
-        public function updateBarang($id)
-        {
-                $this->Barang_model->updateBarang($id);
-                redirect('Admin/profileDonasi');
-                
-        }
+        
 }

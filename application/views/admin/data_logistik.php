@@ -12,6 +12,7 @@
 						<table class="table table-hover">
 							<thead>
 								<tr>
+									<th class="text-center text-primary">Nama Program</th>
 									<th class="text-center text-primary">Nama Barang</th>
 									<th class="text-center text-primary">Jenis Barang</th>
 									<th class="text-center text-primary">Stok Kebutuhan</th>
@@ -22,12 +23,13 @@
 							<tbody>
 								<?php foreach ($kelogistik as $kgt) : ?>
 								<tr>
+									<td class="text-center"> <?= $kgt['nama_program']; ?></td>
 									<td class="text-center"> <?= $kgt['nama_barang']; ?></td>
 									<td class="text-center"> <?= $kgt['jenis_barang']; ?></td>
 									<td class="text-center"> <?= $kgt['stok_kebutuhan']; ?></td>
 									<td class="text-center">Belum Terpenuhi</td>
 									<td class="text-center">
-									<a href="<?= base_url() ?>admin/hapusLogistik/<?= $kgt['id_logistik']; ?>" class="tombol-hapus"><i class="material-icons">done</i></a>
+									<a href="<?= base_url() ?>admin/hapusLogistik/<?= $kgt['id_logistik']; ?>" class="tombol-hapus"><i class="material-icons" title="verifikasi">done</i></a>
 									</td>
 								</tr>
 							<?php endforeach; ?>

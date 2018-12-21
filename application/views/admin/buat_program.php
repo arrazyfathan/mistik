@@ -7,7 +7,8 @@
 						<h4 class="title">Tambahkan Program</h4>
 					</div>
 					<div class="card-content">
-						<form method="post" enctype="multipart/form-data">
+						<!-- <form method="post" enctype="multipart/form-data"> -->
+						<?php echo form_open("admin/buatProgram", array('enctype'=>'multipart/form-data')); ?>
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group label-floating is-empty">
@@ -65,7 +66,7 @@
 								<div class="col-md">
 									<div class="form-group">
 										<label for="img">Upload Image</label>
-										<input type="file" id="img" name="img">
+										<input type="file" id="img" name="input_gambar">
 									</div>
 								</div>
 							</div>
@@ -86,7 +87,7 @@
 								</div>
 							</div>
 							<div class="flash-data2" data-flashdata2="<?= $this->session->flashdata('flash');?>"></div>
-							<button type="submit" class="btn btn-primary pull-right" data-background-color="blue">Tambahkan</button>
+							<button type="submit" name="submit" class="btn btn-primary pull-right" data-background-color="blue">Tambahkan</button>
 							<div class="clearfix"></div>
 						</form>
 					</div>

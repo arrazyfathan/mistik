@@ -7,7 +7,7 @@
 					<div class="card-header" data-background-color="blue">
 						<h4 class="title">Tabel Daftar Program
 						<a href="<?php echo base_url() . 'admin/buatProgram' ?>">
-						<i class="material-icons float-right" style="border-radius:100px; background-color:#fff; color:#0CB5C9;">add</i>
+						<i class="material-icons float-right" style="border-radius:100px; background-color:#fff; color:#0CB5C9;" title="buat program">add</i>
 						</h4>
 						<p class="category">Daftar Program Bantuan Bencana</p>
 					</div>
@@ -17,8 +17,7 @@
 								<tr>
 									<th >Nama Program</th>
 									<th>Jenis Bencana</th>
-									<th>Jumlah Pengungsi</th>
-									<th>Deskripsi</th>
+									<th>Jumlah Pengungsi</th>	
 									<th class="text-center">Action</th>
 								</tr>
 							</thead>
@@ -28,11 +27,10 @@
 									<td> <?= $bcn['nama_program']; ?></td>
 									<td> <?= $bcn['jenis_bencana']; ?></td>
 									<td> <?= $bcn['jumlah_pengungsi']; ?></td>
-									<td> <?= $bcn['deskripsi']; ?> </td>
 									<!-- Menghapus data -->
 									<td class="text-center">
-									<a href="<?= base_url() ?>admin/editBencana/<?= $bcn['id_bencana']; ?>" class="text-center badge badge-warning">Edit </a>
-									<a href="<?= base_url() ?>admin/hapusBencana/<?= $bcn['id_bencana']; ?>" class="text-center badge badge-danger tombol-hapus">Hapus</a>
+									<a href="<?= base_url() ?>admin/editBencana/<?= $bcn['id_bencana']; ?>" class="text-center" title="edit"><i class="material-icons">create</i></a>
+									<a href="<?= base_url() ?>admin/hapusBencana/<?= $bcn['id_bencana']; ?>" class="text-center tombol-hapus" title="hapus"><i class="material-icons">delete_sweep</i></a>
 									</td>
 								</tr>
 							<?php endforeach; ?>

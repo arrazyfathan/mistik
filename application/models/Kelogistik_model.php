@@ -12,6 +12,7 @@ class Kelogistik_model extends CI_Model
     {
         $data = [
 
+            "nama_program" => $this->input->post('nama-program', true),
             "nama_barang" => $this->input->post('nama-barang', true),
             "jenis_barang" => $this->input->post('jenis-barang', true),
             "stok_kebutuhan" => $this->input->post('stok-kebutuhan', true)

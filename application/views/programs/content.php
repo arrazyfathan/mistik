@@ -21,25 +21,25 @@
   <!-- Favicon -->
   <link rel="shortcut icon" href="<?php echo base_url('assets/img/mistik.ico')?>">
 
-  <title>Peduli Rakyat Palu</title>
+  <title><?= $judul; ?></title>
 </head>
 
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-      <a class="navbar-brand " href="<?php echo base_url()?>"><img src="<?php echo base_url('assets/img/logo.svg')?>" alt=" logo"></a>
+      <a class="navbar-brand " href="<?php echo base_url()?>"><img src="<?= base_url('assets/img/logo.svg') ?>" alt=" logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link active " href="#home">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link " href="#program">Program</a>
-          <a class="nav-item nav-link " href="#contact">Contact</a>
-          <a class="nav-item nav-link " href="#about">About</a>
-          <a class="nav-item btn tombol " href="login.html">Login</a>
+          <a class="nav-item nav-link active " href="<?= base_url() ?>">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link " href="<?= base_url() ?>#program">Program</a>
+          <a class="nav-item nav-link " href="<?= base_url() ?>#contact"">Contact</a>
+          <a class="nav-item nav-link " href="<?= base_url() ?>#about">About</a>
+          <a class="nav-item btn tombol " href="<?= base_url() ?>login_donatur">Login</a>
         </div>
       </div>
     </div>
@@ -50,38 +50,30 @@
   <div class="container-fluid konten">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="home">Home</a></li>
         <li class="breadcrumb-item"><a href="#">Program</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Peduli Rakyat Palu</li>
+        <li class="breadcrumb-item active" aria-current="page"><?= $bencana['nama_program']; ?></li>
       </ol>
     </nav>
 
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg">
-          <h3>Peduli Rakyat Palu</h3>
+          <h3><?= $bencana['nama_program']; ?></h3>
           <small>12 Agustus 2018</small><br>
-          <img src="<?php echo base_url('assets/img/Slide/3.jpg')?>">
+          <img src="<?= base_url("assets/img/programs/".$bencana['img_bencana'])?>">
         </div>
         <div class="col-lg">
-          <p class="deskripsi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, magni. Enim modi
-            perspiciatis quasi, numquam
-            at repellendus odit consequatur architecto aspernatur, corrupti animi rem iste veniam fugiat dolor quas
-            magni.<br><br>
-
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, magni. Enim modi
-            perspiciatis quasi, numquam
-            at repellendus odit consequatur architecto aspernatur, corrupti animi rem iste veniam fugiat dolor quas
-            magni.</p>
+          <p class="deskripsi"><?= $bencana['deskripsi']; ?></p>
         </div>
         <div class="col-lg">
           <div class="alert alert-primary pengungsi" role="alert">
             <img src="<?php echo base_url('assets/img/icon/pengungsi.png')?>">
-            <p class="ico-title">120.000 Pengungsi</p>
+            <p class="ico-title"><?= $bencana['jumlah_pengungsi']; ?> Pengungsi</p>
           </div>
           <div class="alert alert-primary posko" role="alert">
             <img src="<?php echo base_url('assets/img/icon/posko.png')?>">
-            <p class="ico-title">140 Posko</p>
+            <p class="ico-title"><?= $bencana['jumlah_posko']; ?> Posko</p>
           </div>
           <div class="alert alert-primary bantuan" role="alert">
             <img src="<?php echo base_url('assets/img/icon/donasi.png')?>">
@@ -96,11 +88,6 @@
 
 
   <!-- End Content -->
-
-
-
-
-
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

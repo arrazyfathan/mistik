@@ -37,8 +37,8 @@
 									</td>
 									<!-- Menghapus data -->
 									<td class="text-center">
-										<a href="<?= base_url() ?>admin/editDonatur/<?= $dtr['id_donatur']; ?>" class="badge badge-warning">Edit </a>
-										<a href="<?= base_url() ?>admin/hapusDonatur/<?= $dtr['id_donatur']; ?>" class="badge badge-danger tombol-hapus">Hapus</a>
+										<a href="<?= base_url() ?>admin/editDonatur/<?= $dtr['id_donatur']; ?>"><i class="material-icons" title="edit">create</i></a>
+										<a href="<?= base_url() ?>admin/hapusDonatur/<?= $dtr['id_donatur']; ?>" class="tombol-hapus"><i class="material-icons" title="hapus">delete_sweep</i></a>
 									</td>
 								</tr>
 								<?php endforeach; ?>

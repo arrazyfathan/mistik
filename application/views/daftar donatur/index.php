@@ -39,7 +39,7 @@
           <a class="nav-item nav-link " href="<?= base_url() ?>#program">Program</a>
           <a class="nav-item nav-link " href="<?= base_url() ?>#contact">Contact</a>
           <a class="nav-item nav-link " href="<?= base_url() ?>#about">About</a>
-          <a class="nav-item btn tombol " href="login_donatur">Login</a>
+          <a class="nav-item btn tombol " href="<?= base_url() ?>login_donatur">Login</a>
         </div>
       </div>
     </div>

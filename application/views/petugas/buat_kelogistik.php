@@ -8,18 +8,20 @@
                     </div>
                     <div class="card-content">
                         <form method="post">
-                            <div class="row">
-                            <div class="col-md-6">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="control-label">Nama Barang</label>
-                                        <input type="text" class="form-control" name="nama-barang">
-                                        <span class="material-input"></span>
-                                        <?php if (validation_errors()) : ?>
-                                            <small><span class="text-danger"><?= form_error('nama-barang'); ?></span></small>
-                                        <?php endif ?>
-                                        </div>
-                                </div>
-                            </div>
+                        <div class="row">
+								<div class="col-md-6">
+									<div class="form-group label-floating">
+										<label class="control-label">Nama Program</label>
+										<select class="material-selected form-control" name="nama-program">
+                                            <?php foreach ($bencana as $bcn) : ?>
+											<option value="<?= $bcn['nama_program']; ?>">
+												<?= $bcn['nama_program'];?>
+											</option>
+											<?php endforeach; ?>
+										</select>
+									</div>
+								</div>
+							</div>
                             <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group label-floating">
@@ -31,6 +33,18 @@
 								</select>
                                 </div>
                             </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-md-6">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label">Nama Barang</label>
+                                        <input type="text" class="form-control" name="nama-barang">
+                                        <span class="material-input"></span>
+                                        <?php if (validation_errors()) : ?>
+                                            <small><span class="text-danger"><?= form_error('nama-barang'); ?></span></small>
+                                        <?php endif ?>
+                                        </div>
+                                </div>
                             </div>
                             <div class="row">
                             <div class="col-md-6">

@@ -15,9 +15,9 @@
 								<tr>
 									<th class="text-center text-primary">Nama Donatur</th>
 									<th class="text-center text-primary">Program Donasi</th>
-									<th class="text-center text-primary">Bentuk Donasi</th>
-									<th class="text-center text-primary">Nama Barang</th>
-									<th class="text-center text-primary">Jumlah Barang</th>
+									<th class="text-center text-primary">Jumlah Donasi</th>
+									<th class="text-center text-primary">Metode Pembayaran</th>
+									<th class="text-center text-primary">Nama Bank</th>
 								</tr>
 							</thead>
 							<tbody>
