@@ -134,6 +134,7 @@
 
 					<img class="modal-img" src="assets/img/love.png" alt="">
 				</div>
+				<div class="flash-data3" data-flashdata3="<?= $this->session->flashdata('flash');?>"></div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-close" data-dismiss="modal">Kembali</button>
 					<button type="submit" class="btn btn-kirim-modal">Kirim</button>
@@ -151,6 +152,13 @@
 	 crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 	 crossorigin="anonymous"></script>
+
+	 <!-- Script Sweet Alert2 -->
+    <script src="<?= base_url()?>assets/js/sweetalert2.all.min.js"></script>
+
+		<!-- My JSS -->
+		<script src="<?= base_url()?>assets/js/sweetalertfix.js"></script>
+
 	<script>
 		$('html, body').css({
 			overflow: 'hidden',
@@ -165,6 +173,8 @@
 // });
 
 	</script>
+
+
 
 
 </body>

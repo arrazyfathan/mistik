@@ -38,7 +38,7 @@ class Donasi_barang extends CI_Controller {
                     } else {
                         
                         $this->Barang_model->tambahDataBarang();
-                        $this->session->set_flashdata('flash', 'Berhasil');
+                        $this->session->set_flashdata('flash', 'Berdonasi');
                         redirect('Donasi_barang');
                 }
         

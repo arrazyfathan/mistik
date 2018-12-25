@@ -1,5 +1,6 @@
 let flashData = $('.flash-data').data('flashdata');
 let flashData2 = $('.flash-data2').data('flashdata2');
+let flashData3 = $('.flash-data3').data('flashdata3');
 
 if (flashData) {
 	Swal({
@@ -13,6 +14,14 @@ if (flashData2) {
 	Swal({
 		title: 'Berhasil',
 		text: 'Data Telah ' + flashData2,
+		type: 'success'
+	});
+}
+
+if (flashData3) {
+	Swal({
+		title: 'Terima Kasih',
+		text: 'Anda Telah ' + flashData3,
 		type: 'success'
 	});
 }
