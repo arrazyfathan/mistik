@@ -15,16 +15,14 @@
 									<th>Nama Program</th>
 									<th>Jenis Bencana</th>
 									<th>Jumlah Pengungsi</th>
-									<th>Deskripsi</th>
 								</tr>
 							</thead>
 							<tbody>
-							<?php foreach ($bencana as $bcn) : ?>
+							<?php foreach ($data->result_array() as $bcn) : ?>
 								<tr>
 									<td> <?= $bcn['nama_program']; ?></td>
 									<td> <?= $bcn['jenis_bencana']; ?></td>
 									<td> <?= $bcn['jumlah_pengungsi']; ?></td>
-									<td> <?= $bcn['deskripsi']; ?> </td>
 								</tr>
 							<?php endforeach; ?>
 							</tbody>
@@ -33,6 +31,13 @@
 				</div>
 			</div>
 		    <!-- End Daftar Program -->
+			<!-- pagenation -->
+			<div class="row">
+				<div class="col">
+					<?php echo $pagination; ?>
+				</div>
+			</div>
+			<!-- end pagenation -->
 		</div>
 	</div>
 </div>

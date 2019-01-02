@@ -1,7 +1,7 @@
 <div class="content">
 	<div class="container-fluid">
 		<div class="row">
-            <!-- Daftar Petugas -->
+            <!-- Daftar Posko -->
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header" data-background-color="purple">
@@ -18,7 +18,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php foreach ($posko as $psk) : ?>
+								<?php foreach ($data->result_array() as $psk) : ?>
 								<tr>
 									<td class="text-center"> <?= $psk['nama_posko']; ?></td>
 									<td class="text-center">
@@ -31,7 +31,14 @@
 					</div>
 				</div>
 			</div>
-            <!-- End Daftar Petugas -->
+            <!-- End Daftar Posko -->
+			<!-- pagenation -->
+			<div class="row">
+				<div class="col">
+					<?php echo $pagination; ?>
+				</div>
+			</div>
+			<!-- end pagenation -->
 		</div>
 	</div>
 </div>

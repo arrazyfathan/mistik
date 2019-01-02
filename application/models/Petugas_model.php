@@ -8,6 +8,12 @@ class Petugas_model extends CI_model
         return $query;
     }
 
+    public function tablePetugas($limit, $start)
+    {
+        $query = $this->db->get('petugas', $limit, $start);
+        return $query;
+    }
+
     public function getPetugasById($id)
     {
         return $this->db->get_where('petugas', ['id_petugas' => $id])->row_array();
@@ -69,7 +75,7 @@ class Petugas_model extends CI_model
         $this->db->or_like('jenis_identitas', $keyword);
         $this->db->or_like('no_identitas', $keyword);
         $this->db->or_like('alamat', $keyword);
-        return $this->db->get('petugas')->result_array();
+        return $this->db->get('petugas');
     }
     
 }

@@ -8,6 +8,12 @@ class Donatur_model extends CI_model
         return $query;
     }
 
+    public function tableDonatur($limit, $start)
+    {
+        $query = $this->db->get('donatur', $limit, $start);
+        return $query;
+    }
+
     public function getDonaturById($id)
     {
         return $this->db->get_where('donatur', ['id_donatur' => $id])->row_array();
@@ -61,7 +67,7 @@ class Donatur_model extends CI_model
         $this->db->or_like('email', $keyword);
         $this->db->or_like('alamat', $keyword);
         $this->db->or_like('no_telepon', $keyword);
-        return $this->db->get('donatur')->result_array();
+        return $this->db->get('donatur');
     }
 
 }

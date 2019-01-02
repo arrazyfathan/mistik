@@ -24,7 +24,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php foreach ($petugas as $pts) : ?>
+								<?php foreach ($data->result_array() as $pts) : ?>
 								<tr>
 									<!-- Menghapus data -->
 									<td class="text-center"> <?= $pts['nama_depan']; ?> <?= $pts['nama_belakang']; ?></td>
@@ -43,13 +43,20 @@
 							<?php endforeach; ?>
 							</tbody>
 						</table>
-						<?php if(empty($petugas)) : ?>
+						<?php if(empty($data)) : ?>
 									<div class="title text-center text-warning"><h3>DATA TIDAK DITEMUKAN</h3></div>
 						<?php endif; ?>
 					</div>
 				</div>
 			</div>
             <!-- End Daftar Petugas -->
+			<!-- pagenation -->
+			<div class="row">
+				<div class="col">
+					<?php echo $pagination; ?>
+				</div>
+			</div>
+			<!-- end pagenation -->
 		</div>
 	</div>
 </div>

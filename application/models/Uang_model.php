@@ -8,6 +8,12 @@ class Uang_model extends CI_model
         return $query;
     }
 
+    public function tableUang($limit, $start)
+    {
+        $query = $this->db->get('uang', $limit, $start);
+        return $query;
+    }
+
     public function cariDataUang()
     {
         $keyword = $this->input->post('keyword', true);
@@ -16,7 +22,7 @@ class Uang_model extends CI_model
         $this->db->or_like('jumlah', $keyword);
         $this->db->or_like('metode_pembayaran', $keyword);
         $this->db->or_like('nama_bank', $keyword);
-        return $this->db->get('uang')->result_array();
+        return $this->db->get('uang');
     }
 
     public function getTotalDonasi()

@@ -8,6 +8,12 @@ class Barang_model extends CI_model
         return $query;
     }
 
+    public function tableBarang($limit, $start)
+    {
+        $query = $this->db->get('barang', $limit, $start);
+        return $query;
+    }
+
     public function tambahDataBarang()
     {
         $data = [
@@ -33,7 +39,7 @@ class Barang_model extends CI_model
         $this->db->or_like('nama_barang', $keyword);
         $this->db->or_like('jumlah_barang', $keyword);
         $this->db->or_like('status', $keyword);
-        return $this->db->get('barang')->result_array();
+        return $this->db->get('barang');
     }
 
     public function updateBarang($id)

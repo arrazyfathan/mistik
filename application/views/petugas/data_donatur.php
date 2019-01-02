@@ -19,7 +19,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php foreach ($donatur as $dtr) : ?>
+								<?php foreach ($data->result_array() as $dtr) : ?>
 								<tr>
 									<td> <?= $dtr['nama_lengkap']; ?></td>
 									<td> <?= $dtr['email']; ?></td>
@@ -33,6 +33,13 @@
 				</div>
 			</div>
             <!-- End Daftar Donatur -->
+			<!-- pagenation -->
+			<div class="row">
+				<div class="col">
+					<?php echo $pagination; ?>
+				</div>
+			</div>
+			<!-- end pagenation -->
 		</div>
 	</div>
 </div>

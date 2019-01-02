@@ -24,7 +24,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php foreach ($petugas as $pts) : ?>
+								<?php foreach ($data->result_array() as $pts) : ?>
 								<tr>
 									<td class="text-center"> <?= $pts['nama_depan']; ?></td>
 									<td class="text-center"> <?= $pts['nama_belakang']; ?></td>
@@ -43,6 +43,13 @@
 				</div>
 			</div>
             <!-- End Daftar Petugas -->
+			<!-- pagenation -->
+			<div class="row">
+				<div class="col">
+					<?php echo $pagination; ?>
+				</div>
+			</div>
+			<!-- end pagenation -->
 		</div>
 	</div>
 </div>

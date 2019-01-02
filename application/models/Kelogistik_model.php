@@ -8,6 +8,12 @@ class Kelogistik_model extends CI_Model
         return $query;
     }
 
+    public function tableKelogistik($limit, $start)
+    {
+        $query = $this->db->get('kelogistik', $limit, $start);
+        return $query;
+    }
+
     public function tambahDataKelogistik()
     {
         $data = [
@@ -35,7 +41,7 @@ class Kelogistik_model extends CI_Model
         $this->db->like('nama_barang', $keyword);
         $this->db->or_like('jenis_barang', $keyword);
         $this->db->or_like('stok_kebutuhan', $keyword);
-        return $this->db->get('kelogistik')->result_array();
+        return $this->db->get('kelogistik');
     }
 
 }

@@ -8,6 +8,12 @@ class Posko_model extends CI_Model{
         return $query;
     }
 
+    public function tablePosko($limit, $start)
+    {
+        $query = $this->db->get('posko', $limit, $start);
+        return $query;
+    }
+
     public function getPoskoById($id)
     {
         return $this->db->get_where('posko', ['id_posko' => $id])->row_array();
@@ -54,6 +60,6 @@ class Posko_model extends CI_Model{
     {
         $keyword = $this->input->post('keyword', true);
         $this->db->like('nama_posko', $keyword);
-        return $this->db->get('posko')->result_array();
+        return $this->db->get('posko');
     }
 }

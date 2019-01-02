@@ -100,13 +100,13 @@
                         </div>
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <!-- <li>
+                                <li>
                                     <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
                                         <i class="material-icons">dashboard</i>
                                         <p class="hidden-lg hidden-md">Dashboard</p>
                                     </a>
-                                </li> -->
-                                <!-- <li class="dropdown">
+                                </li>
+                                <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                         <i class="material-icons">notifications</i>
                                         <span class="notification">5</span>
@@ -129,7 +129,7 @@
                                             <a href="#">Another One</a>
                                         </li>
                                     </ul>
-                                </li> -->
+                                </li>
                                 <li>
                                     <a href="<?php echo base_url().'logindb/logout'?>">Logout</a>
                                 </li>
@@ -140,16 +140,16 @@
                                     </a>
                                 </li>
                             </ul>
-                            <!-- <form class="navbar-form navbar-right" role="search">
+                            <form class="navbar-form navbar-right" role="search" action="" method="post">
                                 <div class="form-group  is-empty">
-                                    <input type="text" class="form-control" placeholder="Search">
+                                    <input type="text" class="form-control" placeholder="Search" name="keyword">
                                     <span class="material-input"></span>
                                 </div>
-                                <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                                <button type="submit" class="btn btn-white btn-round btn-just-icon not-found">
                                     <i class="material-icons">search</i>
                                     <div class="ripple-container"></div>
                                 </button>
-                            </form> -->
+                            </form>
                         </div>
                     </div>
                 </nav>

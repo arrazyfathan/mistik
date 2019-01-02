@@ -21,7 +21,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php foreach ($kelogistik as $kgt) : ?>
+								<?php foreach ($data->result_array() as $kgt) : ?>
 								<tr>
 									<td class="text-center"> <?= $kgt['nama_program']; ?></td>
 									<td class="text-center"> <?= $kgt['nama_barang']; ?></td>
@@ -35,12 +35,19 @@
 							<?php endforeach; ?>
 							</tbody>
 						</table>
-						<?php if(empty($kelogistik)) : ?>
+						<?php if(empty($data)) : ?>
 									<div class="title text-center text-warning"><h3>DATA TIDAK DITEMUKAN</h3></div>
 						<?php endif; ?>
 					</div>
 				</div>
 			</div>
+			<!-- pagenation -->
+			<div class="row">
+				<div class="col">
+					<?php echo $pagination; ?>
+				</div>
+			</div>
+			<!-- end pagenation -->
 		</div>
 	</div>
 </div>

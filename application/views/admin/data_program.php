@@ -22,7 +22,7 @@
 								</tr>
 							</thead>
 							<tbody>
-							<?php foreach ($bencana as $bcn) : ?>
+							<?php foreach ($data->result_array() as $bcn) : ?>
 								<tr>
 									<td> <?= $bcn['nama_program']; ?></td>
 									<td> <?= $bcn['jenis_bencana']; ?></td>
@@ -36,13 +36,20 @@
 							<?php endforeach; ?>
 							</tbody>
 						</table>
-						<?php if(empty($bencana)) : ?>
+						<?php if(empty($data)) : ?>
 									<div class="title text-center text-warning"><h3>DATA TIDAK DITEMUKAN</h3></div>
 						<?php endif; ?>
 					</div>
 				</div>
 			</div>
 		    <!-- End Daftar Program -->
+			<!-- pagenation -->
+			<div class="row">
+				<div class="col">
+					<?php echo $pagination; ?>
+				</div>
+			</div>
+			<!-- end pagenation -->
 		</div>
 	</div>
 </div>

@@ -10,6 +10,12 @@ class Bencana_model extends CI_model
         return $query;
     }
 
+    public function tableBencana($limit, $start)
+    {
+        $query = $this->db->get('bencana', $limit, $start);
+        return $query;
+    }
+
     public function getGrafikBencana()
     {
         return $this->db->get('bencana')->result();
@@ -61,7 +67,7 @@ class Bencana_model extends CI_model
         $this->db->or_like('jenis_bencana', $keyword);
         $this->db->or_like('jumlah_pengungsi', $keyword);
         $this->db->or_like('deskripsi', $keyword);
-        return $this->db->get('bencana')->result_array();
+        return $this->db->get('bencana');
     }
 
 // ---------------------------------------------------------------

@@ -1,7 +1,7 @@
 <div class="content">
 	<div class="container-fluid">
 		<div class="row">
-            <!-- Daftar Petugas -->
+            <!-- Daftar Posko -->
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header" data-background-color="blue">
@@ -20,7 +20,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php foreach ($posko as $psk) : ?>
+								<?php foreach ($data->result_array() as $psk) : ?>
 								<tr>
 									<td class="text-center"> <?= $psk['nama_posko']; ?></td>
 									<td class="text-center">
@@ -32,13 +32,20 @@
 							<?php endforeach; ?>
 							</tbody>
 						</table>
-						<?php if(empty($posko)) : ?>
+						<?php if(empty($data)) : ?>
 									<div class="title text-center text-warning"><h3>DATA TIDAK DITEMUKAN</h3></div>
 						<?php endif; ?>
 					</div>
 				</div>
 			</div>
-            <!-- End Daftar Petugas -->
+            <!-- End Daftar Posko -->
+			<!-- pagenation -->
+			<div class="row">
+				<div class="col">
+					<?php echo $pagination; ?>
+				</div>
+			</div>
+			<!-- end pagenation -->
 		</div>
 	</div>
 </div>
